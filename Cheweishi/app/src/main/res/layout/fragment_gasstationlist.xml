@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/gasstaion_meiyouzhaodao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/car_main_user"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/gain_car_address_error" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.cheweishi.android.widget.XListView
+            android:id="@+id/gasstationlist_listview"
+            android:divider="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RadioGroup
+            android:id="@+id/gasstationlist_list_rgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginleft_gassta"
+            android:layout_marginTop="@dimen/car_main_user"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/gasstationlist_car_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cbox_carlocation_selector"
+                android:button="@null"
+                android:padding="@dimen/field_margin_right" />
+
+            <RadioButton
+                android:id="@+id/gasstationlist_person_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_left"
+                android:background="@drawable/cbox_personlocation_selector"
+                android:button="@null"
+                android:padding="@dimen/field_margin_right" />
+        </RadioGroup>
+    </RelativeLayout>
+
+</LinearLayout>

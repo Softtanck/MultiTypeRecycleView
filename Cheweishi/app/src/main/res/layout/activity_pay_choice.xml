@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_marging">
+
+        <!--
+             <com.cheweishi.android.widget.FontAwesomeView
+            android:id="@+id/icon_hint"
+            android:layout_width="@dimen/double_large_marging"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/icon_remind"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/ttf_sixteen" />
+        -->
+
+        <!--因为没有活动,暂时注释掉-->
+        <ImageView
+            android:id="@+id/icon_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/chongzhi_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/icon_hint"
+            android:paddingLeft="@dimen/small_padding"
+            android:text="@string/pay_hint"
+            android:textColor="@color/gray_pressed"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/normal_marging"
+        android:layout_marginLeft="@dimen/normal_marging"
+        android:layout_marginTop="@dimen/normal_marging"
+        android:text="@string/choice_pay_hint"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/item_content_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/normal_marging"
+        android:layout_marginTop="@dimen/normal_marging"
+        android:background="@color/line_gray" />
+
+    <RadioGroup
+        android:id="@+id/pay_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zhufubao2x" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/small_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/alipay_pay"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/titile_side_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/alipay_pay_hint"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/item_medium_text_size" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dian22x" />
+
+            <RadioButton
+                android:id="@+id/rb_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="true"
+                android:drawableRight="@drawable/radio_button_check"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/normal_padding"
+            android:background="@color/line_gray"
+            android:paddingBottom="@dimen/small_padding"
+            android:paddingTop="@dimen/small_padding" />
+
+        <LinearLayout
+            android:id="@+id/ll_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/weixin2x" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/small_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/weixin_pay"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/titile_side_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/weixin_pay_hint"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/item_medium_text_size" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dian12x" />
+
+            <RadioButton
+                android:id="@+id/rb_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="false"
+                android:drawableRight="@drawable/radio_button_check"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upacp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/normal_padding"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yinlian" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/small_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/upacp_pay"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/titile_side_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/weixin_pay_hint"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/item_medium_text_size" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_upacp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dian12x" />
+
+            <RadioButton
+                android:id="@+id/rb_upacp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="false"
+                android:drawableRight="@drawable/radio_button_check"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_pay_balance_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="使用账户余额支付"
+            android:textColor="@color/red" />
+
+        <CheckBox
+            android:id="@+id/cb_pay_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/check"
+            android:checked="false"
+            android:padding="10dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/top_left_small_padding"
+        android:layout_marginLeft="@dimen/normal_padding"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_pay_choice_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_marging"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:text="@string/pay_money"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/item_content_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/normal_marging"
+            android:layout_marginLeft="@dimen/normal_padding"
+            android:background="@color/line_gray"
+            android:paddingBottom="@dimen/small_padding"
+            android:paddingTop="@dimen/small_padding" />
+
+        <RadioGroup
+            android:id="@+id/money_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_marging"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_money_100"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/normal_marging"
+                android:layout_weight="1"
+                android:background="@drawable/pay_money_selector"
+                android:button="@null"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/normal_padding"
+                android:paddingLeft="@dimen/small_padding"
+                android:paddingRight="@dimen/small_padding"
+                android:paddingTop="@dimen/normal_padding"
+                android:text="@string/pay_200"
+                android:textColor="@color/text_color_white_blue"
+                android:textSize="@dimen/text_size_small" />
+
+            <RadioButton
+                android:id="@+id/rb_money_300"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/normal_marging"
+                android:layout_weight="1"
+                android:background="@drawable/pay_money_selector"
+                android:button="@null"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/normal_padding"
+                android:paddingLeft="@dimen/small_padding"
+                android:paddingRight="@dimen/small_padding"
+                android:paddingTop="@dimen/normal_padding"
+                android:text="@string/pay_400"
+                android:textColor="@color/text_color_white_blue"
+                android:textSize="@dimen/text_size_small" />
+
+            <RadioButton
+                android:id="@+id/rb_money_600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/normal_marging"
+                android:layout_weight="1"
+                android:background="@drawable/pay_money_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/normal_padding"
+                android:paddingLeft="@dimen/small_padding"
+                android:paddingRight="@dimen/small_padding"
+                android:paddingTop="@dimen/normal_padding"
+                android:text="@string/pay_600"
+                android:textColor="@color/text_color_white_blue"
+                android:textSize="@dimen/text_size_small" />
+
+            <RadioButton
+                android:id="@+id/rb_money_1000"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/pay_money_selector"
+                android:button="@null"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/normal_padding"
+                android:paddingLeft="@dimen/small_padding"
+                android:paddingRight="@dimen/small_padding"
+                android:paddingTop="@dimen/normal_padding"
+                android:text="@string/pay_1000"
+                android:textColor="@color/text_color_white_blue"
+                android:textSize="@dimen/text_size_small" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pay_choice_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_marging"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:text="购买设备金额:"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/item_content_size" />
+
+        <TextView
+            android:id="@+id/tv_pay_choice_device_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/normal_marging"
+            android:gravity="center"
+            android:text="暂时未获得价格"
+            android:paddingBottom="@dimen/normal_padding"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:paddingTop="@dimen/normal_padding"
+            android:textColor="@color/text_color_white_blue"
+            android:textSize="@dimen/text_size_large" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_large_marging"
+        android:background="@drawable/btn_blue_bg_selector"
+        android:gravity="center"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingTop="@dimen/normal_padding"
+        android:text="@string/pay_true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large" />
+
+</LinearLayout>

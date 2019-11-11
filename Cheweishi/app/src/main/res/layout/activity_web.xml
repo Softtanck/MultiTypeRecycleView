@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding">
+
+        <Button
+            android:id="@+id/left_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:drawableLeft="@drawable/left"
+            android:paddingRight="@dimen/top_left_large_padding"
+            android:text="@string/back"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <TextView
+            android:id="@+id/web_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="10"
+            android:padding="@dimen/normal_padding"
+            android:singleLine="true"
+            android:text="@string/see_details"
+            android:textColor="@color/orange_text_color"
+            android:textSize="@dimen/title__text_size" />
+
+        <TextView
+            android:id="@+id/right_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/top_left_large_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:textColor="@color/orange_text_color"
+            android:textSize="@dimen/titile_side_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/pb_web_loading"
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:indeterminateOnly="false"
+            android:max="100"
+            android:progressDrawable="@drawable/web_load_progressbar" />
+
+        <LinearLayout
+            android:id="@+id/web_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/et_web"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.0"
+                android:background="@drawable/web_comment_bg"
+                android:hint="@string/say_two"
+                android:maxLength="200"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/bt_web"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/car_manager_rect_selector"
+                android:text="@string/comment"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_web_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1.0"
+                android:drawableLeft="@drawable/news_count"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_web_like"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:drawableLeft="@drawable/news_like"
+                android:gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/light_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/web_bottom"
+            android:layout_below="@id/pb_web_loading" />
+    </RelativeLayout>
+
+</LinearLayout>

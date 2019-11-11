@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud">
+
+    <include
+        android:id="@+id/choice_title"
+        layout="@layout/title" />
+
+    <LinearLayout
+        android:id="@+id/ll_choice_tilte_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choice_title"
+        android:background="@color/orange"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_choice_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常规保养"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_choice_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_choice_total_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:text="总价:正在获取中..."
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_choice_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <com.cheweishi.android.widget.UnSlidingExpandableListView
+        android:id="@+id/usl_choice_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_choice_bottom"
+        android:layout_below="@id/ll_choice_tilte_name"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:footerDividersEnabled="false"
+        android:groupIndicator="@null"
+
+        />
+
+
+</RelativeLayout>

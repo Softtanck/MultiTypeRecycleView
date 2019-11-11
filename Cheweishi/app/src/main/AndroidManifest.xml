@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cheweishi.android">
+
+    <!--<uses-sdk-->
+    <!--android:minSdkVersion="11"-->
+    <!--android:targetSdkVersion="19" />-->
+    <!-- 百度 -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 环信 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission
+        android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation" />
+    <!--<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 友盟推送权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 友盟推送权限可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 友盟意见反馈 -->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!-- 友盟自动更新 -->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>-->
+    <!--<uses-permission android:name="android.permission.INTERNET"></uses-permission>-->
+
+    <!-- 极光推送 -->
+    <permission
+        android:name="com.cheweishi.android.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required 一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.cheweishi.android.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:name="com.cheweishi.android.application.Myapplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--
+        <activity
+            android:name="com.cheweishi.android.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+
+        -->
+
+
+        <!-- 极光推送start -->
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cheweishi.android" />
+            </intent-filter>
+        </activity>
+        <!-- Required SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"></service>
+        <!-- Required SDK 核心功能 -->
+
+
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        -
+
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            -
+
+
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+
+
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        -
+
+
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            -
+
+
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.cheweishi.android" />
+            </intent-filter>
+        </service>
+        <!-- Required SDK核心功能 -->
+        -
+
+
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            -
+
+
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required 显示通知栏 -->
+                <category android:name="com.cheweishi.android" />
+            </intent-filter>
+            -
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            -
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+        <!-- User defined. For test only 用户自定义的广播接收器 -->
+        -
+
+
+        <receiver
+            android:name="com.cheweishi.android.recevier.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            -
+
+
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.cheweishi.android" />
+            </intent-filter>
+        </receiver>
+        <!-- Required . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+
+
+            android:value="37ada1a7a6d7a3b77cde69b8" />
+        <!-- 极光推送end --><!--566a1897831b41d075ba7760-->
+
+        <!--苏:eb1ec435f9a7e7305c51621a-->
+        <!--原:37ada1a7a6d7a3b77cde69b8-->
+        <!--37ada1a7a6d7a3b77cde69b8-->
+        <!--老版本eb1ec435f9a7e7305c51621a-->
+
+
+        <!-- 友盟推送 -->
+        <!-- <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" >
+        </receiver> -->
+        <!-- <receiver android:name="com.cheweishi.android.recevier.PhoneReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver> -->
+        <!--  <receiver
+             android:name="com.umeng.message.SystemReceiver"
+             android:process=":push" >
+             <intent-filter>
+                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                 <data android:scheme="package" />
+             </intent-filter>
+         </receiver> -->
+        <!-- <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver> -->
+        <!-- <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver> -->
+        <!-- <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.cheweishi.android.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver> -->
+        <!--  <receiver android:name="com.umeng.message.BootBroadcastReceiver" >
+             <intent-filter>
+                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+             </intent-filter>
+         </receiver> -->
+
+        <!-- <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="com.cheweishi.android.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.cheweishi.android.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </service> -->
+        <!-- <service android:name="com.umeng.message.UmengIntentService" /> -->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57996a02e0f55a1f7f002f7c"></meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="32a48958059fb1ab067436afd836b61a"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng"></meta-data>
+
+        <!-- If you donot want to use the standard notification bar in SDK, you can define IntentService instead to handle message. -->
+        <!-- <service android:name="com.cheweishi.android.service.MyPushIntentService" />
+        <service android:name="com.umeng.message.UmengDownloadResourceService" >
+        </service> -->
+
+        <!-- 百度 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.6"></action>
+            </intent-filter>
+        </service>
+
+        <!-- 设置环信应用的appkey -->
+        <!-- <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="changhongcws#cheweishi" /> -->
+
+        <!-- 声明sdk所需的service -->
+        <!--  <service android:name="com.easemob.chat.EMChatService" /> -->
+
+        <!-- 开机自启动服务 -->
+        <!-- <receiver android:name="com.easemob.chat.StartServiceReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver> -->
+
+        <activity
+            android:name="com.cheweishi.android.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <!--&lt;!&ndash; 百度 &ndash;&gt;-->
+        <!--<service-->
+        <!--android:name="com.baidu.location.f"-->
+        <!--android:enabled="true"-->
+        <!--android:process=":remote"></service>-->
+
+        <!-- 设置环信应用的appkey -->
+        <!-- <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="changhongcws#cheweishi" /> -->
+
+        <!-- 友盟appKey -->
+        <!--<meta-data-->
+        <!--android:name="UMENG_APPKEY"-->
+        <!--android:value="551a1660fd98c51e5700085f"></meta-data>-->
+        <!-- 声明sdk所需的service -->
+        <!-- <service android:name="com.easemob.chat.EMChatService" /> -->
+
+        <!-- 开机自启动服务 -->
+        <!--  <receiver android:name="com.easemob.chat.StartServiceReceiver" >
+             <intent-filter android:priority="1000" >
+                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </receiver> -->
+        <!-- 我的   m3QYzIxQFvlKyFg74eqQ1gwF -->
+        <!-- 车生活  egzXtdHQN58stO0pccYl1pD9  -->
+
+
+        <!-- 张强创建的 GGmp0qlEwENBuZEXszErYAAg -->  <!--egzXtdHQN58stO0pccYl1pD9-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+
+            android:value="egzXtdHQN58stO0pccYl1pD9" />
+
+        <!-- Ping++ sdk -->
+        <!-- <activity
+            android:name="com.pingplusplus.android.PaymentActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        微信支付 sdk ，也是 Ping++ sdk 调用入口
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+        支付宝 sdk
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+
+        银联支付 sdk
+        <activity android:name="com.unionpay.uppay.PayActivity" >
+        </activity> -->
+
+        <!-- 我的车 -->
+
+        <activity
+            android:name="com.cheweishi.android.activity.CarDynamicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.BNavigatorActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.CarReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.StarsRankingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.CarManagerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.StarRankingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.RepairServiceActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.RepairServiceDetailActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.PrivacySettingsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.ContextMenu"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/MyDialogStyle"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cheweishi.android.activity.AddCarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.cheweishi.android.activity.CarTypeCarBrandModelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.CarTypeCarStyleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.KeyDetectionActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.ContactActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"-->
+        <!--android:windowSoftInputMode="adjustPan|stateHidden"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.RegistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.UserInfoEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.FootmarkMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.PlateChooseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"></activity>
+        <!-- 友盟意见反馈 -->
+        <!-- <activity
+            android:name="com.cheweishi.android.activity.UmengConversationDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheweishi.android.activity.UmengConversationListActivity"
+            android:screenOrientation="portrait" >
+        </activity> -->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.TyreListActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.DrivingActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.IllegalQueryActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!-- 自定义友盟意见反馈界面 -->
+        <!-- <activity
+            android:name="com.cheweishi.android.activity.UmengFbConversationActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar" >
+        </activity> -->
+        <activity
+            android:name="com.cheweishi.android.activity.GasStationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+
+        <!-- 友盟 -->
+
+        <!-- <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity> -->
+        <activity
+            android:name="com.cheweishi.android.activity.WebActivity"
+            android:label="@string/title_activity_province_city_country"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.DetactionInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.RepairGalleryActivity"-->
+        <!--android:label="@string/title_activity_repair_gallery"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.UserSignActivity"
+            android:label="@string/title_activity_user_sign"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.PasswordForgetActivity"
+            android:label="@string/title_activity_password_forget"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.PasswordModifyActivity"
+            android:label="@string/title_activity_password_modify"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.WeiXiuDetailActivity"-->
+        <!--android:label="@string/title_activity_wei_xiu_detail"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.EmergencyActivity"-->
+        <!--android:label="@string/title_activity_emergency"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.AboutUsActivity"
+            android:label="@string/title_activity_emergency"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.FunctionIntroductionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.TeamIntroduceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.AddCarExtraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.RegistFinishActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.RegistServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="cn.sharesdk.framework.ShareSDKUIShell"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar"-->
+        <!--android:windowSoftInputMode="stateHidden|adjustResize">-->
+
+        <!--&lt;!&ndash;-->
+        <!--AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter-->
+        <!--的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。-->
+        <!--开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。-->
+
+
+        <!--&ndash;&gt;-->
+        <!--<meta-data-->
+        <!--android:name="AuthorizeAdapter"-->
+        <!--android:value="cn.sharesdk.demo.MyAdapter" />-->
+
+        <!--&lt;!&ndash;-->
+        <!--QZoneWebShareAdapter表示一个继承自cn.sharesdk.tencent.qzone.QZoneWebShareAdapter-->
+        <!--的类，这个类可以监听到页面的生命周期，也可以获QQ空间网页分享权页面的各种UI控件。-->
+        <!--开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。-->
+
+        <!--<meta-data android:name="QZoneWebShareAdapter" android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />-->
+
+
+        <!--&ndash;&gt;-->
+        <!--&lt;!&ndash;-->
+        <!--Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是-->
+        <!--“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权-->
+
+
+        <!--&ndash;&gt;-->
+        <!--<intent-filter>-->
+        <!--<data android:scheme="db-7janx53ilz11gbs" />-->
+
+        <!--<action android:name="android.intent.action.VIEW" />-->
+
+        <!--<category android:name="android.intent.category.BROWSABLE" />-->
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--</intent-filter>-->
+
+        <!--&lt;!&ndash;-->
+        <!--如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW-->
+        <!--事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，-->
+        <!--则分享结束以后不能得到正确的回调-->
+
+
+        <!--&ndash;&gt;-->
+        <!--<intent-filter>-->
+        <!--<data android:scheme="tencent100371282" />-->
+
+        <!--<action android:name="android.intent.action.VIEW" />-->
+
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--<category android:name="android.intent.category.BROWSABLE" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <!-- 微信分享回调 -->
+        <!--<activity-->
+        <!--android:name="cn.sharesdk.demo.wxapi.WXEntryActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--android:exported="true"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>-->
+        <!--&lt;!&ndash; 易信分享回调 &ndash;&gt;-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.yxapi.YXEntryActivity"-->
+        <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--android:excludeFromRecents="true"-->
+        <!--android:exported="true"-->
+        <!--android:launchMode="singleTop"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+
+        <!--&lt;!&ndash; 调用新浪原生SDK，需要注册的activity &ndash;&gt;-->
+        <!--<activity-->
+        <!--android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"-->
+        <!--android:configChanges="keyboardHidden|orientation"-->
+        <!--android:exported="false"-->
+        <!--android:windowSoftInputMode="adjustResize"></activity>-->
+
+        <!-- 调用新浪原生SDK，需要注册的回调activity -->
+        <!--<activity-->
+        <!--android:name="cn.sharesdk.sina.weibo.SinaActivity"-->
+        <!--android:theme="@android:style/Theme.Translucent.NoTitleBar">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />-->
+
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.PurseActivity"
+            android:label="@string/title_activity_drving_behavior"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.PurseRedPacketsActivity"
+            android:label="@string/title_activity_drving_behavior"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.PurseIntegralActivity"
+            android:label="@string/title_activity_drving_behavior"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.PurseBalanceActivity"
+            android:label="@string/title_activity_drving_behavior"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.MyAccountActivity"
+            android:label="@string/title_activity_my_account"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.UserNickActivity"
+            android:label="@string/title_activity_user_nick"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.ProvinceAndCharGridActivityndCharGridActivity"-->
+        <!--android:label="@string/title_activity_province_and_char_grid"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar" />-->
+        <activity
+            android:name="com.cheweishi.android.activity.SetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.AboutUsNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.IntegralHelpActivity"
+            android:label="@string/title_activity_integral_help"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.ChooseDateBirthActivity"
+            android:label="@string/title_activity_choosedate"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!-- 消息中心 -->
+        <activity
+            android:name="com.cheweishi.android.activity.MessagerCenterActivity"
+            android:label="@string/title_activity_integral_help"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!-- 消息详情 -->
+        <activity
+            android:name="com.cheweishi.android.activity.MessageCenterDetailsActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.ReturnFeeThatActivity"
+            android:label="@string/title_activity_return_fee_that"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.TelephoneExplainActivity"
+            android:label="@string/title_activity_telephone_explain"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.ServiceHallActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.DetectionExplainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.DTCDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.QueryIllegalActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.IllegalHelpActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.IllegalHistoryActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.IllegalQueryResultActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.SOSCrashLevelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.WashcarListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.WashcarDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.WashCarPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <!-- alipay sdk end -->
+
+        <receiver android:name="com.cheweishi.android.utils.weixinpay.simcpux.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!-- 微信支付回调界面 -->
+        <activity
+            android:name="com.cheweishi.android.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"></activity>
+
+        <activity
+            android:name="com.cheweishi.android.activity.PayActivty"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.ZhongChouActivity"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.PessanySearchActivity"
+            android:label="@string/title_activity_pessany_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.MainNewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.CarDetectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.SecurityScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar" />
+        <activity
+            android:name="com.cheweishi.android.activity.SoSActivity"
+            android:label="@string/title_activity_province_and_char_grid"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.SosSeekActivity"
+            android:label="@string/title_activity_province_and_char_grid"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.MaintainDetilsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar" />
+        <activity
+            android:name="com.cheweishi.android.activity.MaintainOrderDetilsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar" />
+        <activity
+            android:name="com.cheweishi.android.activity.ProvinceAndCharGridActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar" />
+        <!-- 二维码扫描界面 -->
+        <activity
+            android:name="com.cheweishi.android.activity.MipcaActivityCapture"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar" />
+        <!-- 二维码扫描结果处理界面 -->
+        <activity
+            android:name="com.cheweishi.android.activity.QRCodeResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar" />
+        <activity
+            android:name="com.cheweishi.android.activity.MyorderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.OrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.BaskOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.AllCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <!--<activity-->
+        <!--android:name="com.cheweishi.android.activity.CancelOrderOne"-->
+        <!--android:screenOrientation="portrait"-->
+        <!--android:theme="@style/myAnimationNoTileBar"></activity>-->
+        <activity
+            android:name="com.cheweishi.android.activity.FindParkingSpaceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.IdeaReturnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.AddDeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+        <activity
+            android:name="com.cheweishi.android.activity.OrderPaymentSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myAnimationNoTileBar"></activity>
+
+
+        <!--消息中心-->
+
+        <!-- 商城-->
+        <activity
+            android:name="com.cheweishi.android.activity.CarShopActivity"
+            android:screenOrientation="portrait" />
+
+        <!--保养-->
+        <activity
+            android:name="com.cheweishi.android.activity.MaintainDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <!--美容-->
+        <activity
+            android:name="com.cheweishi.android.activity.BeautyDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <!--违章详情-->
+        <activity
+            android:name="com.cheweishi.android.activity.PessanySearchDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--保养列表-->
+        <activity
+            android:name="com.cheweishi.android.activity.MaintainListActivity_new"
+            android:screenOrientation="portrait" />
+
+        <!--美容列表-->
+        <activity
+            android:name=".activity.BeautyListActivity_new"
+            android:screenOrientation="portrait" />
+
+        <!--服务详情-->
+        <activity
+            android:name=".activity.ServiceDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--活动优惠券-->
+        <activity
+            android:name=".activity.CouponActivity"
+            android:screenOrientation="portrait" />
+
+        <!--优惠券详细列表-->
+        <activity
+            android:name=".activity.CouponDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--保养-->
+        <activity
+            android:name=".activity.MaintainComponentActivity"
+            android:screenOrientation="portrait" />
+
+        <!--选择-->
+        <activity
+            android:name=".activity.ChoiceComponentActivity"
+            android:screenOrientation="portrait" />
+
+        <!--设备列表-->
+        <activity
+            android:name=".activity.DevicesListActivity"
+            android:screenOrientation="portrait" />
+
+        <!--租户头像详情-->
+        <activity
+            android:name=".activity.TenantHeadImgActivity"
+            android:screenOrientation="portrait" />
+
+        <!--商城-->
+        <activity
+            android:name=".activity.CreditActivity"
+            android:screenOrientation="portrait" />
+
+        <!--主页更多-->
+        <activity
+            android:name=".activity.HomeMoreActivity"
+            android:screenOrientation="portrait" />
+
+        <!--商品详情-->
+        <activity
+            android:name=".activity.ProductDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--成长红包-->
+        <activity
+            android:name=".activity.UpRedIntegralActivity"
+            android:screenOrientation="portrait" />
+
+        <!--产品详情参数-->
+        <activity
+            android:name=".activity.ProductParamDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--购物车-->
+        <activity
+            android:name=".activity.BuyCartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!--商品订单-->
+        <activity
+            android:name=".activity.ShopPayOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <!--我的收货地址-->
+        <activity
+            android:name=".activity.MyReceiveAddressActivity"
+            android:screenOrientation="portrait" />
+
+        <!--地址管理-->
+        <activity
+            android:name=".activity.AddressManagerActivity"
+            android:screenOrientation="portrait" />
+
+        <!--商品支付界面-->
+        <activity
+            android:name=".activity.ShopPayActivity"
+            android:screenOrientation="portrait" />
+
+        <!--商品订单列表-->
+        <activity
+            android:name=".activity.MyShopOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <!--商品订单详情-->
+        <activity
+            android:name=".activity.ShopOrderDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--退货/售后-->
+        <activity
+            android:name=".activity.ReturnActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

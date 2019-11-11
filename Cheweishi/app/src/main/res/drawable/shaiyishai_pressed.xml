@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+
+    <solid android:color="@color/car_type_back" />
+
+    <padding
+        android:bottom="1dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="1dp" />
+
+    <solid android:color="@color/car_type_back" />
+
+    <stroke
+        android:width="1dp"
+        android:color="@color/orange" />
+
+    <size
+        android:height="150dp"
+        android:width="150dp" />
+
+</shape>

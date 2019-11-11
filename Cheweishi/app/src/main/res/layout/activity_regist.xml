@@ -1,0 +1,389 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <requestFocus />
+            </LinearLayout>
+
+            <include layout="@layout/title" />
+
+            <LinearLayout
+                android:id="@+id/ll_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_double_large_marging"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/large_padding">
+
+                    <com.cheweishi.android.widget.ClearEditText
+                        android:id="@+id/phonenumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:digits="0123456789"
+                        android:gravity="center_vertical"
+                        android:hint="@string/tel_input"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_message_remind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_padding"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/large_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="@string/tel_send"
+                        android:inputType="phone"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_remind"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="@color/orange_text_color"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_vote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_marging"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/large_padding">
+
+                    <com.cheweishi.android.widget.ClearEditText
+                        android:id="@+id/edt_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="@string/please_code_enter"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="@color/line_gray" />
+
+                <Button
+                    android:id="@+id/btn_getcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="@string/getcode"
+                    android:textColor="@color/orange_text_color"
+                    android:textSize="@dimen/titile_side_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_notsms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right|center_vertical"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_thirteen_sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:paddingRight="15dp"
+                android:text="实时语音验证码吧"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_thirteen_sp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/ll_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_double_large_marging"
+                android:background="@color/gray_backgroud"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/large_padding">
+
+                    <com.cheweishi.android.widget.ClearEditText
+                        android:id="@+id/edt_password"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:gravity="center_vertical"
+                        android:hint="@string/pleaseInputPass"
+                        android:inputType="textPassword"
+                        android:maxLength="14"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <ImageButton
+                        android:id="@+id/ib_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/normal_marging"
+                        android:background="@null"
+                        android:paddingRight="@dimen/normal_padding"
+                        android:src="@drawable/yan12x"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/double_large_marging"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/large_padding">
+
+                    <com.cheweishi.android.widget.ClearEditText
+                        android:id="@+id/edt_confirmpassword"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:gravity="center_vertical"
+                        android:hint="@string/pleaseInputConfirmPass"
+                        android:inputType="textPassword"
+                        android:maxLength="14"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/double_large_marging"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/weizhang_tishi"
+                        android:drawablePadding="@dimen/small_padding"
+                        android:text="@string/not_same"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/titile_side_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_double_large_marging"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edt_oldpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="@string/pleaseInputConfirmPass"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_nick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_double_large_marging"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding"
+                android:visibility="gone">
+
+                <com.cheweishi.android.widget.ClearEditText
+                    android:id="@+id/edt_nickName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/pleaseInputnick"
+                    android:paddingLeft="@dimen/normal_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/top_left_small_padding"
+                android:layout_marginRight="@dimen/top_left_small_padding"
+                android:layout_marginTop="@dimen/top_left_small_padding"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/id2x"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/deviceId"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/idcard"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="请输入设备ID"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_saoma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="扫一扫" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_regist_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/top_left_small_padding"
+                android:layout_marginRight="@dimen/top_left_normal_padding"
+                android:layout_marginTop="50dp"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/service_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/login_jizhumima"
+                    android:checked="true"
+                    android:textColor="@color/orange_text_color"
+                    android:textSize="@dimen/titile_side_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/already_readservice_rule"
+                    android:textColor="@color/orange_text_color"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/top_left_small_padding"
+                android:layout_marginRight="@dimen/top_left_small_padding"
+                android:layout_marginTop="@dimen/top_left_small_padding"
+                android:background="@drawable/login_back"
+                android:padding="@dimen/normal_padding"
+                android:text="@string/next"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/title__text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_padding"
+            android:src="@drawable/weizhang_img" />
+
+
+        <TextView
+            android:id="@+id/tv_dialog_img_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/purse_coupon_register"
+            android:textColor="@color/main_orange"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ib_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/img_dialog"
+            android:layout_alignTop="@+id/img_dialog"
+            android:background="@null"
+            android:src="@drawable/weizhang_shan" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:id="@+id/ll_locate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/more_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jiuyuan_location2x" />
+
+        <com.cheweishi.android.widget.MarqueeTextView
+            android:id="@+id/Sos_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_marging"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/right"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/SosPhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/itme_heigth"
+            android:layout_alignParentBottom="true"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="呼叫救援"
+            android:textColor="@color/sliding_menu_background"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="gone" />
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/Sos_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/SosPhone" />
+    </RelativeLayout>
+
+</LinearLayout>

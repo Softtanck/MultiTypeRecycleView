@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="province_item">
+        <item value="479">北京</item>
+        <item value="480">河北</item>
+        <item value="481">山东</item>
+        <item value="482">上海</item>
+        <item value="483">广东</item>
+        <item value="484">安徽</item>
+        <item value="485">福建</item>
+        <item value="486">甘肃</item>
+        <item value="487">广西</item>
+        <item value="488">贵州</item>
+        <item value="489">海南</item>
+        <item value="490">河南</item>
+        <item value="491">黑龙江</item>
+        <item value="492">湖北</item>
+        <item value="493">湖南</item>
+        <item value="494">吉林</item>
+        <item value="495">江苏</item>
+        <item value="496">江西</item>
+        <item value="497">辽宁</item>
+        <item value="498">内蒙古</item>
+        <item value="499">宁夏</item>
+        <item value="500">青海</item>
+        <item value="501">山西</item>
+        <item value="502">陕西</item>
+        <item value="503">四川</item>
+        <item value="504">天津</item>
+        <item value="505">西藏</item>
+        <item value="506">新疆</item>
+        <item value="507">云南</item>
+        <item value="508">浙江</item>
+        <item value="509">重庆</item>
+        <item value="510">台湾</item>
+        <item value="511">香港</item>
+        <item value="512">澳门</item>
+        <item value="551">贵州</item>
+        <item value="552">大使馆</item>
+    </string-array>
+    <string-array name="province_short_item">
+        <item value="513">京</item>
+        <item value="514">冀</item>
+        <item value="515">鲁</item>
+        <item value="516">沪</item>
+        <item value="517">粤</item>
+        <item value="518">皖</item>
+        <item value="519">闽</item>
+        <item value="520">甘</item>
+        <item value="521">桂</item>
+        <item value="522">贵</item>
+        <item value="523">琼</item>
+        <item value="524">豫</item>
+        <item value="525">黑</item>
+        <item value="526">鄂</item>
+        <item value="527">湘</item>
+        <item value="528">吉</item>
+        <item value="529">苏</item>
+        <item value="530">赣</item>
+        <item value="531">辽</item>
+        <item value="532">蒙</item>
+        <item value="533">宁</item>
+        <item value="534">青</item>
+        <item value="535">晋</item>
+        <item value="536">陕</item>
+        <item value="537">川</item>
+        <item value="538">津</item>
+        <item value="539">藏</item>
+        <item value="540">新</item>
+        <item value="541">云</item>
+        <item value="542">浙</item>
+        <item value="543">渝</item>
+        <item value="544">台</item>
+        <item value="545">港</item>
+        <item value="546">澳</item>
+        <item value="547">黔</item>
+        <item value="548">使</item>
+    </string-array>
+    <string-array name="oil_item">
+        <item value="547">97#汽油</item>
+        <item value="548">93#汽油</item>
+        <item value="549">0#柴油</item>
+    </string-array>
+    <string-array name="color_item">
+        <item value="550">红色</item>
+        <item value="551">黑色</item>
+        <item value="552">白色</item>
+        <item value="553">蓝色</item>
+        <item value="554">黄色</item>
+        <item value="555">绿色</item>
+    </string-array>
+    <string-array name="detection_item_name">
+        <item>综合车况</item>
+        <item>车辆状态</item>
+        <item>总里程(km)</item>
+        <item>空燃比系数</item>
+        <item>蓄电池电压(V)</item>
+        <item>节气门开度(%)</item>
+        <item>发动机负荷(%)</item>
+        <item>发动机运行时间(S)</item>
+        <item>百公里油耗(L/km)</item>
+        <item>剩余油量(L)</item>
+        <item>转速(rad/m)</item>
+        <item>车速(km/h)</item>
+        <item>环境温度(℃)</item>
+        <item>水温(℃)</item>
+        <item>OBD时间</item>
+        <item>养护状态</item>
+        <item>距上次保养(km)</item>
+        <item>距下次年审(天)</item>
+        <item>故障检测</item>
+        <item>故障码</item>
+    </string-array>
+    <string-array name="detection_item_explain_name">
+        <item>总里程(km)</item>
+        <item>空燃比系数</item>
+        <item>蓄电池电压(V)</item>
+        <item>节气门开度</item>
+        <item>发动机负荷(%)</item>
+        <item>发动机运行时间(S)</item>
+        <item>百公里油耗(L/km)</item>
+        <item>剩余油量(L)</item>
+        <item>转速(rad/m)</item>
+        <item>车速(km/h)</item>
+        <item>环境温度(℃)</item>
+        <item>水温(℃)</item>
+        <item>OBD时间</item>
+        <item>距上次保养(km)</item>
+        <item>距下次年审(天)</item>
+        <item>故障码</item>
+    </string-array>
+    <string-array name="detection_item_explain_range">
+        <item>-</item>
+        <item>-</item>
+        <item>11.5~15.0</item>
+        <item>0~100</item>
+        <item>1~100</item>
+        <item>-</item>
+        <item>-</item>
+        <item>-</item>
+        <item>0~6000</item>
+        <item>0~160</item>
+        <item>-40~60</item>
+        <item>-40~110</item>
+        <item>-</item>
+        <item>5000</item>
+        <item>15</item>
+        <item>-</item>
+    </string-array>
+    <string-array name="char_array">
+        <item value="570">A</item>
+        <item value="571">B</item>
+        <item value="572">C</item>
+        <item value="573">D</item>
+        <item value="574">E</item>
+        <item value="575">F</item>
+        <item value="576">G</item>
+        <item value="577">H</item>
+        <item value="578">I</item>
+        <item value="579">J</item>
+        <item value="580">K</item>
+        <item value="581">L</item>
+        <item value="582">M</item>
+        <item value="583">N</item>
+        <item value="584">O</item>
+        <item value="585">P</item>
+        <item value="586">Q</item>
+        <item value="587">R</item>
+        <item value="588">S</item>
+        <item value="589">T</item>
+        <item value="590">U</item>
+        <item value="591">V</item>
+        <item value="592">W</item>
+        <item value="593">X</item>
+        <item value="594">Y</item>
+        <item value="595">Z</item>
+    </string-array>
+
+</resources>

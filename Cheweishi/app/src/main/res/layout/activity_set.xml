@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itme_heigth"
+                android:layout_marginTop="@dimen/large_marging"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/set_alarm"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <CheckBox
+                    android:id="@+id/cb_call_police"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@drawable/check"
+                    android:paddingRight="@dimen/large_padding" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/large_marging"
+                android:layout_height="1dp"
+                android:layout_gravity="left"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itme_heigth"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/set_sound"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <CheckBox
+                    android:id="@+id/cb_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@drawable/check"
+                    android:paddingRight="@dimen/large_padding" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/large_marging"
+                android:layout_height="1dp"
+                android:layout_gravity="left"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itme_heigth"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/set_shake"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <CheckBox
+                    android:id="@+id/cb_shake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@drawable/check"
+                    android:paddingRight="@dimen/large_padding" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/large_marging"
+                android:layout_height="1dp"
+                android:layout_gravity="left"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itme_heigth"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/set_push"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <CheckBox
+                    android:id="@+id/cb_push"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@drawable/check"
+                    android:paddingRight="@dimen/large_padding" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/large_marging"
+                android:layout_height="1dp"
+                android:layout_gravity="left"
+                android:background="@color/white"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_good_reputation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itme_heigth"
+                android:layout_marginTop="@dimen/xlarge_marging"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/xlarge_marging">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/right"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/set_reputation"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/text_size_medium" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/large_marging"
+                android:layout_height="1dp"
+                android:layout_gravity="left"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itme_heigth"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/set_version"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/large_padding"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/text_size_medium" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/large_marging"
+                android:layout_height="1dp"
+                android:layout_gravity="left"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_about_my"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itme_heigth"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/xlarge_marging">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/right"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/set_about_my"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/text_size_medium" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/large_marging"
+                android:layout_height="1dp"
+                android:layout_gravity="left"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/itme_heigth"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/xlarge_marging">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/right"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/set_clear_cache"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/text_size_medium" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_setout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/double_double_large_marging"
+                android:layout_marginTop="@dimen/double_large_marging"
+                android:background="@drawable/more_back"
+                android:text="@string/set_out"
+                android:textColor="@color/main_blue" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

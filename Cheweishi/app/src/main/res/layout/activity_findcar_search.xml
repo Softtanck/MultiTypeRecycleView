@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_two"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding">
+
+        <EditText
+            android:id="@+id/ed_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/normal_padding"
+            android:layout_marginRight="@dimen/normal_padding"
+            android:layout_marginTop="@dimen/normal_padding"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/zhaochewei_sousuo"
+            android:drawablePadding="@dimen/small_padding"
+            android:hint="@string/search_hint"
+            android:paddingLeft="@dimen/normal_padding"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textColor="@color/orange"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/normal_marging"
+        android:paddingBottom="@dimen/normal_marging"
+        android:paddingLeft="@dimen/large_marging"
+        android:paddingRight="@dimen/large_marging"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="@dimen/nosmall_padding"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jiuyuan_location" />
+
+        <TextView
+            android:id="@+id/tv_location_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_location"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/text_black_colcor"
+            android:layout_toRightOf="@id/img_location" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/nosmall_padding"
+            android:textColor="@color/gray_pressed"
+            android:layout_toRightOf="@id/img_location"
+            android:layout_below="@id/tv_location_hint" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/seach_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/gray_backgroud"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none" />
+
+</LinearLayout>

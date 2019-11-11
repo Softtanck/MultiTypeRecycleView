@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="@dimen/normal_marging"
+        android:background="@color/hyal_head" />
+
+    <RelativeLayout
+        android:id="@+id/rl_item_order_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:id="@+id/tv_item_order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/item_small_text_size" />
+
+        <TextView
+            android:id="@+id/tv_item_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/red"
+            android:textSize="@dimen/item_small_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/tv_item_order_status"
+            android:layout_marginTop="@dimen/normal_marging"
+            android:background="@color/orange" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

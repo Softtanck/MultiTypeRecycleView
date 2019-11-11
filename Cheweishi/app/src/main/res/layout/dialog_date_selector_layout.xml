@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:padding="@dimen/top_left_small_padding">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/friend_circel_hot_page"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/large_padding"
+            android:text="年检状态"
+            android:textColor="@color/main_blue"
+            android:textSize="@dimen/text_maintence_status_size"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/jiance_line2x" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/maintance_dialog_heigth"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_message"
+                style="@style/text_16_666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/top_left_small_padding"
+                android:layout_marginTop="@dimen/normal_padding"
+                android:text="@string/year_dialog_hint"
+                android:textSize="@dimen/text_size_large" />
+
+            <com.cheweishi.android.widget.DateSelectorWheelView
+                android:id="@+id/pdwv_date_time_selector_wheelView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.cheweishi.android.widget.DateSelectorWheelView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_bottomLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/double_double_large_marging"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/normal_marging"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:layout_marginRight="@dimen/normal_marging"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_dialog_heigth"
+                android:layout_margin="@dimen/normal_marging"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_pos_back"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_dialog_heigth"
+                android:layout_margin="@dimen/normal_marging"
+                android:layout_marginLeft="@dimen/top_left_small_padding"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_pos_back"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

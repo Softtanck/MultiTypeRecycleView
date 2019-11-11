@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/line_gray"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/normal_marging"
+                android:paddingBottom="@dimen/normal_marging"
+                android:background="@color/white"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv_order_title"
+                    android:layout_toRightOf="@+id/img_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预约成功，等待商家确认"
+                    android:textColor="@color/green_deep"
+                    android:textSize="@dimen/ttf_fourteen"
+                    android:padding="@dimen/normal_padding"
+                    android:layout_gravity="center_horizontal" />
+
+                <ImageView
+                    android:id="@+id/img_order"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/dingdanxiangqing_chenggong" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xlarge_marging"
+                android:paddingTop="@dimen/normal_marging"
+                android:background="@color/white"
+                android:layout_gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/rel_yuyue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/normal_marging"
+                    android:layout_toLeftOf="@+id/tv_line_left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_yuyue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_yuyue"
+                        android:text="预约下单"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/ttf_fourteen" />
+
+                    <ImageView
+                        android:id="@+id/img_yuyue"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/dingdanxiangqing_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12-04 11:33"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/ttf_ten"
+                        android:padding="@dimen/two_dp_padding"
+                        android:layout_below="@+id/tv_yuyue" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_daodian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_daodian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_daodian"
+                        android:text="到店保养"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/ttf_fourteen" />
+
+                    <ImageView
+                        android:id="@+id/img_daodian"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/dingdanxiangqing_baoyang" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12-04 11:33"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/ttf_ten"
+                        android:padding="@dimen/two_dp_padding"
+                        android:layout_below="@+id/tv_daodian" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/tv_line_right"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_ok"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/dingdanxiangqing_pay" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12-04 11:33"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/ttf_ten"
+                        android:padding="@dimen/two_dp_padding"
+                        android:layout_below="@+id/tv_ok" />
+
+                    <TextView
+                        android:id="@+id/tv_ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/img_ok"
+                        android:gravity="center"
+                        android:text="确认支付"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/ttf_fourteen" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_line_right"
+                    android:layout_width="30dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/rel_daodian"
+                    android:background="@color/line_gray" />
+
+                <TextView
+                    android:id="@+id/tv_line_left"
+                    android:layout_width="30dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_alignTop="@+id/rel_yuyue"
+                    android:layout_toLeftOf="@+id/rel_daodian"
+                    android:background="@color/blue" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/tv_line"
+                android:id="@+id/park_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/xlarge_marging"
+                android:paddingBottom="@dimen/small_padding"
+                android:paddingLeft="@dimen/normal_padding"
+                android:paddingRight="@dimen/normal_padding"
+                android:paddingTop="@dimen/normal_marging">
+
+                <LinearLayout
+                    android:id="@+id/lay_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/car_iv_location"
+                        android:layout_width="@dimen/title_height"
+                        android:layout_height="@dimen/title_height"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="@dimen/list_item_img"
+                        android:maxWidth="@dimen/list_item_img"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/zhaochewei_img" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:layout_toRightOf="@+id/lay_img"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/lay_name"
+                            android:layout_toLeftOf="@+id/img_maintain_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|top">
+
+                            <TextView
+                                android:id="@+id/car_tv_car_iv_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="天天爱保养4s店"
+                                android:textColor="@color/gray_normal"
+                                android:textSize="@dimen/ttf_fourteen" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lay_name"
+                            android:gravity="left|center_vertical"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/haoping" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/set_top_marging"
+                                android:src="@drawable/haoping" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/set_top_marging"
+                                android:src="@drawable/haoping" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100%好评"
+                                android:layout_marginLeft="@dimen/set_top_marging"
+                                android:textColor="@color/deep_orange"
+                                android:textSize="@dimen/ttf_twelve" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_maintain_phone"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_toLeftOf="@+id/img_maintain_ditu"
+                            android:src="@drawable/baoyang_phone" />
+
+                        <ImageView
+                            android:id="@+id/img_maintain_ditu"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/baoyang_daohang" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@+id/img_maintain_ditu"
+                            android:background="@color/line_gray" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top">
+
+                        <TextView
+                            android:id="@+id/car_xlocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="江北区观音桥街道办事处5楼（12345678）"
+                            android:textColor="@color/gray_normal"
+                            android:textSize="@dimen/ttf_twelve" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xlarge_marging"
+                android:text="现代 朗动保养套餐"
+                android:textSize="@dimen/ttf_fourteen"
+                android:textColor="@color/gray_normal"
+                android:background="@color/white"
+                android:padding="@dimen/normal_padding" />
+
+            <ListView
+                android:background="@color/white"
+                android:id="@+id/lv_maintain_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xlarge_marging"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单金额"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/ttf_fourteen"
+                    android:background="@color/white"
+                    android:padding="@dimen/normal_padding" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥580"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/ttf_fourteen"
+                    android:padding="@dimen/normal_padding"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/xlarge_marging">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务车辆"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/ttf_fourteen"
+                    android:padding="@dimen/normal_padding" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="渝BTS789 现代 朗动"
+                    android:textColor="@color/gray_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_saoyisao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/xlarge_marging"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/normal_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="汽车完成后请让商家扫一扫下面的二维码哟~"
+                    android:textSize="@dimen/ttf_twelve"
+                    android:layout_gravity="center"
+                    android:textColor="@color/blue"
+                    android:padding="@dimen/normal_padding" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/erweima_test"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/xlarge_marging">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务须知"
+                    android:textSize="@dimen/ttf_fourteen"
+                    android:padding="@dimen/normal_marging"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/memorabilia_notes_one"
+                    android:textSize="@dimen/ttf_twelve"
+                    android:padding="@dimen/normal_marging"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/memorabilia_notes_two"
+                    android:textSize="@dimen/ttf_twelve"
+                    android:padding="@dimen/normal_marging"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/memorabilia_notes_three"
+                    android:textSize="@dimen/ttf_twelve"
+                    android:padding="@dimen/normal_marging"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/normal_padding"
+    android:paddingRight="@dimen/normal_padding">
+
+    <Button
+        android:id="@+id/left_action"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:drawableLeft="@drawable/left"
+        android:drawablePadding="@dimen/small_padding"
+        android:paddingRight="@dimen/top_left_large_padding"
+        android:text="@string/back"
+        android:textColor="@color/title_text_gray"
+        android:textSize="@dimen/titile_side_text_size" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/title__text_size" />
+
+    <ImageButton
+        android:id="@+id/right_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/dongtai_gps" />
+
+</RelativeLayout>

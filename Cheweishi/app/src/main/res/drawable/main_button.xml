@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下 -->
+    <!-- <item android:drawable="@drawable/shaiyishai_pressed" android:state_pressed="true"></item> -->
+
+
+    <!-- 焦点 -->
+    <!-- <item android:drawable="@drawable/shaiyishai_back" android:state_pressed="false"></item> -->
+
+    <item android:state_pressed="false">
+        <layer-list>
+
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/main_text3" />
+
+                    <corners android:radius="5dp" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp">
+                <shape>
+                    <gradient android:angle="90" android:centerColor="@color/white" android:centerX="0.5" android:centerY="0.5" android:endColor="@color/white" android:startColor="@color/white" android:type="linear" />
+
+                    <padding android:bottom="@dimen/kuang_padding" android:left="@dimen/kuang_padding" android:right="@dimen/kuang_padding" android:top="@dimen/kuang_padding" />
+                    <!-- 应该是圆角 -->
+                    <corners android:radius="5dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+
+    <item android:state_pressed="true">
+        <layer-list>
+            <!-- 连框颜色值 -->
+            <item>
+                <shape>
+                    <solid android:color="@color/main_text3" />
+
+                    <corners android:radius="5dp" />
+                </shape>
+            </item>
+            <!-- 主体背景颜色值 -->
+            <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp">
+                <shape>
+                    <gradient android:angle="90" android:centerColor="#e1f0ff" android:centerX="0.5" android:centerY="0.5" android:endColor="#e1f0ff" android:startColor="#e1f0ff" android:type="linear" />
+
+                    <padding android:bottom="@dimen/kuang_padding" android:left="@dimen/kuang_padding" android:right="@dimen/kuang_padding" android:top="@dimen/kuang_padding" />
+                    <!-- 应该是圆角 -->
+                    <corners android:radius="5dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

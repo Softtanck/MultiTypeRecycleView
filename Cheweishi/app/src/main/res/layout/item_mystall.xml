@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/large_padding"
+    android:paddingLeft="@dimen/normal_padding"
+    android:paddingRight="@dimen/large_padding"
+    android:paddingTop="@dimen/large_padding">
+
+    <ImageView
+        android:id="@+id/car_iv_location"
+        android:layout_width="@dimen/list_item_img"
+        android:layout_height="@dimen/list_item_img"
+        android:layout_marginRight="@dimen/normal_marging"
+        android:adjustViewBounds="true"
+        android:maxHeight="@dimen/list_item_img"
+        android:maxWidth="@dimen/list_item_img"
+        android:scaleType="fitCenter"
+        android:src="@drawable/zhaochewei_img" />
+
+    <TextView
+        android:id="@+id/car_tv_car_iv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/car_iv_location"
+        android:layout_toRightOf="@id/car_iv_location"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/title_center_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/car_iv_location"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/car_tv_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/chewei_fangxiang"
+            android:drawablePadding="@dimen/small_padding"
+            android:textColor="@color/gray_normal_6"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:background="@color/line_gray" />
+
+        <TextView
+            android:id="@+id/car_xlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:drawablePadding="@dimen/small_marging"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="asdaksjdhak"
+            android:textColor="@color/gray_normal_6"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/car_iv_location"
+        android:layout_toRightOf="@id/car_iv_location"
+        android:baselineAligned="false"
+        android:gravity="left|bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|bottom">
+
+            <TextView
+                android:id="@+id/car_tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/chewei_chewei"
+                android:drawablePadding="@dimen/small_padding"
+                android:textColor="@color/orange"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_num_surplus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/shengyucar"
+                android:singleLine="true"
+                android:textColor="@color/gray_pressed"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/car_tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:drawablePadding="@dimen/small_padding"
+                android:drawableLeft="@drawable/chewei_money"
+                android:textSize="13sp"
+                android:ellipsize="end"
+                android:maxEms="5"
+                android:singleLine="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginStart="3dp"
+                android:text="@string/yuanqi"
+                android:textColor="@color/gray_pressed"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/car_lin_daozhequ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/chewei_go"
+            android:drawablePadding="@dimen/small_padding"
+            android:text="到这去"
+            android:gravity="center"
+            android:textColor="@color/gray_pressed"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 测试 -->
+    <dimen name="car_main_below_padding">10dp</dimen>
+
+</resources>

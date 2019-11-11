@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/gasstation_bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/large_marging"
+            android:alpha="0.9"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingBottom="@dimen/large_padding"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingTop="@dimen/top_left_small_padding">
+
+            <RadioGroup
+                android:id="@+id/rgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/gasstation_cbox_car_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cbox_carlocation_selector"
+                    android:button="@null"
+                    android:layout_margin="@dimen/padding_search_bar" />
+
+                <RadioButton
+                    android:id="@+id/gasstation_cbox_person_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/large_marging"
+                    android:background="@drawable/cbox_personlocation_selector"
+                    android:button="@null"
+                    android:layout_margin="@dimen/padding_search_bar" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/cbox_traffic_gasstion_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_marging"
+                android:background="@drawable/cbox_traffic_selector"
+                android:button="@null"
+                android:layout_margin="@dimen/small_padding" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gasstation_linearlayout_isyingchang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_left"
+            android:layout_marginBottom="@dimen/normal_marging"
+            android:background="@drawable/zhaocheweibj2x"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/gasstationlistview_map_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:layout_marginTop="@dimen/sameday_oilwear_min"
+                    android:textColor="@color/text_black_colcor"
+                    android:text="加油站"
+                    android:textSize="@dimen/titile_side_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/gasstationlistview_map_item_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="啊是大叔机会大家是"
+                android:layout_marginTop="@dimen/small_marging"
+                android:layout_marginLeft="@dimen/large_marging"
+                android:textColor="@color/gray_normal_6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_marging"
+                android:layout_marginTop="@dimen/top_left_small_padding">
+
+                <LinearLayout
+                    android:layout_width="@dimen/blue_sub_action_button_content_margin"
+                    android:layout_height="@dimen/top_left_large_padding"
+                    android:layout_weight="1"
+                    android:background="@drawable/findcarportitemkuang"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/gasstationlistview_map_item_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/small_padding"
+                        android:drawableLeft="@drawable/chedongtai_licheng"
+                        android:drawablePadding="@dimen/small_padding"
+                        android:textColor="@color/text_black_colcor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/sameday_oilwear_min"
+                        android:text="@string/meter"
+                        android:textColor="@color/text_black_colcor" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/image_thumbnail_spacing"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_backgroud" />
+
+                <LinearLayout
+                    android:id="@+id/gasstation_linearlayout_notive"
+                    android:layout_width="@dimen/blue_sub_action_button_content_margin"
+                    android:layout_height="@dimen/top_left_large_padding"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/chewei_go"
+                        android:drawablePadding="5dp"
+                        android:layout_marginLeft="@dimen/three_list_item"
+                        android:text="@string/mycar_to_there"
+                        android:textColor="@color/text_black_colcor" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/gass_decrese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/gasstation_linearlayout_isyingchang"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/sameday_oilwear_min"
+            android:background="@null"
+            android:src="@drawable/ibtn_map_decrese" />
+
+        <ImageButton
+            android:id="@+id/gass_increse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/gass_decrese"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/sameday_oilwear_min"
+            android:background="@null"
+            android:src="@drawable/ibtn_map_increse" />
+    </RelativeLayout>
+
+</LinearLayout>

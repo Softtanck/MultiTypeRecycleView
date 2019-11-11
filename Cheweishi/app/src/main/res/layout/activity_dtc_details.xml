@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_thumbnail_spacing"
+                android:layout_marginTop="@dimen/large_marging"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/large_marging"
+                android:paddingTop="@dimen/large_marging">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:text="@string/dtc_code"
+                    android:textColor="@color/main_blue"
+                    android:textSize="@dimen/titile_side_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_dtc_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/double_large_marging"
+                    android:text="P0434"
+                    android:textColor="@color/text_black_colcor"
+                    android:textSize="@dimen/titile_side_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_thumbnail_spacing"
+                android:background="@color/line_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_thumbnail_spacing"
+                android:layout_marginTop="@dimen/large_marging"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/large_marging"
+                android:paddingTop="@dimen/large_marging">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:text="@string/dtc_explain"
+                    android:textColor="@color/main_blue"
+                    android:textSize="@dimen/titile_side_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_dtc_explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/double_large_marging"
+                    android:layout_marginRight="@dimen/large_marging"
+                    android:text="你莎莎就是多哈卡就阿萨时间乃啥东东快接啊是的哈可三就的哈可三大撒看世界的哈看世界的哈啊会计师打卡机 "
+                    android:textColor="@color/text_black_colcor"
+                    android:textSize="@dimen/titile_side_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_thumbnail_spacing"
+                android:background="@color/line_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_thumbnail_spacing"
+                android:layout_marginTop="@dimen/double_double_large_marging"
+                android:background="@color/line_gray" />
+
+            <Button
+                android:id="@+id/btn_solve_dtc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center"
+                android:paddingBottom="@dimen/large_marging"
+                android:paddingTop="@dimen/large_marging"
+                android:text="@string/solve_dtc"
+                android:textColor="@color/main_blue"
+                android:textSize="@dimen/titile_side_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_thumbnail_spacing"
+                android:background="@color/line_gray" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

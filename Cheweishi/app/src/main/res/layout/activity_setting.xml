@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <Button
+        android:id="@+id/bt_report_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/double_large_marging"
+        android:background="@drawable/more_back"
+        android:drawableRight="@drawable/right"
+        android:gravity="left|center_vertical"
+        android:padding="@dimen/normal_padding"
+        android:text="@string/warning_title"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/text_size_medium" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_backgroud" />
+
+    <Button
+        android:id="@+id/bt_sos_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/more_back"
+        android:drawableRight="@drawable/right"
+        android:gravity="left|center_vertical"
+        android:padding="@dimen/normal_padding"
+        android:text="@string/SOS_setting"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/text_size_medium" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_backgroud" />
+
+    <Button
+        android:id="@+id/bt_signDetail_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/more_back"
+        android:drawableRight="@drawable/right"
+        android:gravity="left|center_vertical"
+        android:padding="@dimen/normal_padding"
+        android:text="@string/signin_title"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/text_size_medium" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_backgroud" />
+
+    <Button
+        android:id="@+id/bt_message_push"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/more_back"
+        android:drawableRight="@drawable/right"
+        android:gravity="left|center_vertical"
+        android:padding="@dimen/normal_padding"
+        android:text="消息推送"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/text_size_medium" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_backgroud" />
+
+    <Button
+        android:id="@+id/bt_aboutUs_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/more_back"
+        android:drawableRight="@drawable/right"
+        android:gravity="left|center_vertical"
+        android:padding="@dimen/normal_padding"
+        android:text="关于我们"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/text_size_medium" />
+
+    <Button
+        android:id="@+id/bt_logout_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/double_double_large_marging"
+        android:background="@drawable/more_back"
+        android:padding="@dimen/normal_padding"
+        android:textColor="@color/main_blue"
+        android:textSize="@dimen/text_size_medium" />
+
+</LinearLayout>

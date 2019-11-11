@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/title" />
+
+    <RelativeLayout
+        android:id="@+id/rel_xcRoundImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/xlarge_marging">
+
+        <com.cheweishi.android.widget.XCRoundImageView
+            android:id="@+id/xcRoundImg"
+            android:layout_width="@dimen/purse_width"
+            android:layout_height="@dimen/purse_height"
+            android:background="@drawable/shape_circle" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_balance_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_balance_yuan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ttf_twenty" />
+
+            <TextView
+                android:id="@+id/tv_balance_yuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:text="@string/purse_integral"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ttf_twelve" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ley_integral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_xcRoundImg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/normal_marging"
+        android:background="@drawable/pay_click_selector"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_prize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:layout_marginRight="@dimen/small_marging"
+            android:src="@drawable/jifen_prize" />
+
+        <TextView
+            android:id="@+id/tv_score_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_prize"
+            android:paddingBottom="@dimen/small_marging"
+            android:paddingRight="@dimen/normal_marging"
+            android:paddingTop="@dimen/small_marging"
+            android:text="@string/purse_integral_mall"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/ttf_fourteen" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ley_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ley_integral"
+        android:layout_toRightOf="@+id/ley_zhong"
+        android:background="@drawable/pay_click_selector"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/img_duihuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:layout_marginRight="@dimen/small_marging"
+            android:src="@drawable/jifen_duihuan" />
+
+        <TextView
+            android:id="@+id/tv_convert_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_duihuan"
+            android:paddingBottom="@dimen/small_marging"
+            android:paddingRight="@dimen/normal_marging"
+            android:paddingTop="@dimen/small_marging"
+            android:text="@string/purse_record"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/ttf_fourteen" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ley_zhong"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ley_integral"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ley_record"
+        android:layout_marginTop="@dimen/xlarge_marging">
+
+        <TextView
+            android:id="@+id/tv_jilu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/purse_credits_log"
+            android:textColor="@color/grid_state_focused"
+            android:textSize="@dimen/ttf_fourteen" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_jilu"
+            android:background="@color/line_gray"></RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_jilu"
+            android:background="@color/line_gray"></RelativeLayout>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/integral_xlistview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_marginTop="@dimen/xlarge_marging" />
+
+
+</RelativeLayout>

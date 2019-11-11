@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/channel_item_child_listview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:numColumns="4"
+    android:orientation="horizontal"
+    android:padding="@dimen/small_padding">
+
+    <TextView
+        android:id="@+id/tv_item_child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:maxEms="10"
+        android:padding="@dimen/small_padding"
+        android:singleLine="true"
+        android:text="保养"
+        android:textColor="@color/gray_normal"
+        android:textSize="@dimen/AssortView_text_size" />
+
+    <TextView
+        android:id="@+id/tv_item_child_discount_showOrNot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:singleLine="true"
+        android:text="会员红包"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_ten_sp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:singleLine="true"
+        android:textColor="@color/gray_normal"
+        android:textSize="@dimen/text_ten_sp" />
+
+    <TextView
+        android:id="@+id/tv_discount_price_remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:padding="@dimen/small_padding"
+        android:singleLine="true"
+        android:text="优惠价"
+        android:textColor="@color/gray_normal"
+        android:textSize="@dimen/AssortView_text_size"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="￥16"
+            android:textColor="@color/red"
+            android:textSize="@dimen/home_bootom_text_size" />
+
+        <TextView
+            android:id="@+id/tv_original_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:text="￥30"
+            android:textColor="@color/gray_pressed"
+            android:textSize="@dimen/text_ten_sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!--android:focusable="true"
+        android:focusableInTouchMode="true"-->
+    <TextView
+        android:id="@+id/btn_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:background="@drawable/pay_click_selector"
+
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="支付"
+        android:textColor="@color/orange"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_backgroud"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/forty"
+        android:paddingTop="@dimen/forty">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/about_logo2x" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_marging"
+            android:text="@string/banben"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/titile_side_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_check_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/more_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/banben_updata"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <TextView
+            android:id="@+id/tv_show_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_update_old"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/titile_side_text_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:id="@+id/llayout_function"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/more_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/function_introduction"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:id="@+id/llayout_team"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/more_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/team_introduction"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/double_double_large_marging"
+            android:layout_marginRight="@dimen/double_double_large_marging"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_officialWebsite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/official_website"
+                android:textColor="@color/orange_text_color"
+                android:textSize="@dimen/titile_side_text_size"></Button>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/top_left_small_padding"
+                android:background="@color/line_gray" />
+
+            <Button
+                android:id="@+id/bt_officialTel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/telephone"
+                android:textColor="@color/orange_text_color"
+                android:textSize="@dimen/titile_side_text_size"></Button>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/top_left_small_padding"
+                android:background="@color/line_gray" />
+
+            <Button
+                android:id="@+id/bt_officialEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/mailbox"
+                android:textColor="@color/orange_text_color"
+                android:textSize="@dimen/titile_side_text_size"></Button>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/large_marging"
+            android:gravity="center"
+            android:text="@string/copyrights"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/home_bootom_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

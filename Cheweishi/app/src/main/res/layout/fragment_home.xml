@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:descendantFocusability="blocksDescendants"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_home_top_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:padding="@dimen/top_left_small_padding">
+
+                <ImageView
+                    android:id="@+id/iv_home_user_car"
+                    android:layout_width="@dimen/red_action_button_margin"
+                    android:layout_height="@dimen/red_action_button_margin"
+                    android:src="@drawable/tianjiacar_img2x" />
+
+                <TextView
+                    android:id="@+id/tv_home_user_car_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:layout_toRightOf="@id/iv_home_user_car"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:singleLine="true"
+                    android:textColor="@color/text_saoyisao_color"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_home_user_car_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_home_user_car_name"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:layout_toRightOf="@id/iv_home_user_car"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:singleLine="true"
+                    android:textColor="@color/btn_gray_normal"
+                    android:textSize="14sp" />
+
+
+                <ImageView
+                    android:id="@+id/iv_home_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_next" />
+
+                <TextView
+                    android:id="@+id/tv_home_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_home_next"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@color/btn_gray_normal"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_gray" />
+
+            <com.cheweishi.android.widget.UnslidingGridView
+                android:id="@+id/gv_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/line_gray"
+                android:cacheColorHint="#00000000"
+                android:horizontalSpacing="1dp"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="1dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xlarge_marging"
+                android:background="@color/line_gray" />
+
+            <com.cheweishi.android.thirdpart.ConvenientBanner
+                android:id="@+id/cb_home_av"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="gone"
+                app:canLoop="true"
+                app:new_layout="false" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<com.cheweishi.android.widget.MyGallery-->
+            <!--android:id="@+id/mygallery"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:soundEffectsEnabled="false" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_focus_indicator_container"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/line_gray"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="@dimen/small_padding" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_activity_area"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/more_back"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/large_padding">
+
+
+                    <ImageView
+                        android:id="@+id/img_activity_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/large_padding"
+                        android:src="@drawable/huodongqu" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_home_hascoupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/img_activity_area"
+                        android:layout_marginTop="@dimen/normal_padding"
+                        android:src="@drawable/mess_dain"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/tv_activity_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/small_marging"
+                        android:layout_marginTop="@dimen/large_padding"
+                        android:layout_toRightOf="@id/img_activity_area"
+                        android:text="@string/main_activity_area"
+                        android:textColor="@color/text_black_colcor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_area_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/small_marging"
+                        android:layout_toRightOf="@id/img_activity_area"
+                        android:text="@string/main_area_content"
+                        android:textColor="@color/gray_pressed"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/line_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_integral_mall"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/more_back"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/large_padding"
+                    android:paddingTop="@dimen/large_padding">
+
+                    <ImageView
+                        android:id="@+id/img_integral_mall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/jifenshangcheng2" />
+
+                    <TextView
+                        android:id="@+id/tv_integral_mall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/small_marging"
+                        android:layout_toRightOf="@id/img_integral_mall"
+                        android:text="@string/main_integral_mall"
+                        android:textColor="@color/text_black_colcor"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_integral_mall_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/small_marging"
+                        android:layout_toRightOf="@id/img_integral_mall"
+                        android:text="@string/main_integral_mall_content"
+                        android:textColor="@color/gray_pressed"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xlarge_marging"
+                android:background="@color/line_gray" />
+
+            <com.cheweishi.android.widget.UnSlidingListView
+                android:id="@+id/list_business"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:listSelector="#00000000"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>

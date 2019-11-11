@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/findcarportmap_bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:alpha="0.9"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="@dimen/large_padding"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:paddingTop="@dimen/top_left_small_padding">
+
+        <CheckBox
+            android:id="@+id/lukuangxx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cbox_traffic_selector"
+            android:button="@null"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_twelve" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/findcarport_decrese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/viewpager_relativelayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/normal_marging"
+        android:background="@null"
+        android:src="@drawable/ibtn_map_decrese" />
+
+    <ImageButton
+        android:id="@+id/findcarport_increse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/findcarport_decrese"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/normal_marging"
+        android:background="@null"
+        android:src="@drawable/ibtn_map_increse" />
+
+    <ImageView
+        android:id="@+id/findcar_location_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/viewpager_relativelayout"
+        android:layout_marginLeft="@dimen/normal_marging"
+        android:src="@drawable/zhaochewei_dingwei_icon" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/viewpager_relativelayout"
+        android:layout_toRightOf="@+id/findcar_location_icon"
+        android:orientation="vertical"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/viewpager_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:clipChildren="false"
+        android:layerType="software"></RelativeLayout>
+
+</RelativeLayout>

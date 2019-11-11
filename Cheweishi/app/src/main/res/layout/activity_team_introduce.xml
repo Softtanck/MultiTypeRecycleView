@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_team"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tuidui_img2x"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/top_left_small_padding"
+        android:drawableLeft="@drawable/circle_orange"
+        android:drawablePadding="@dimen/small_padding"
+        android:gravity="center_vertical"
+        android:text="@string/team_front"
+        android:textSize="@dimen/title__text_size"
+        android:textColor="@color/text_black_colcor"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/normal_marging"
+        android:gravity="center_vertical"
+        android:text="@string/frot_content"
+        android:textColor="@color/text_color_grag_yellow"
+        android:textSize="@dimen/item_content_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/top_left_small_padding"
+        android:drawableLeft="@drawable/circle_orange"
+        android:drawablePadding="@dimen/small_padding"
+        android:gravity="center_vertical"
+        android:text="@string/company_name"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="@dimen/title__text_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:gravity="center_vertical"
+        android:text="@string/company_team"
+        android:textColor="@color/text_color_grag_yellow"
+        android:textSize="@dimen/item_content_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/top_left_small_padding"
+        android:drawableLeft="@drawable/circle_orange"
+        android:drawablePadding="@dimen/small_padding"
+        android:gravity="center_vertical"
+        android:text="@string/future_direction"
+        android:textSize="@dimen/title__text_size"
+        android:textColor="@color/text_black_colcor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:gravity="center_vertical"
+        android:text="@string/direction_content"
+        android:textColor="@color/text_color_grag_yellow"
+        android:textSize="@dimen/item_content_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/top_left_small_padding"
+        android:drawableLeft="@drawable/circle_orange"
+        android:drawablePadding="@dimen/small_padding"
+        android:gravity="center_vertical"
+        android:text="@string/team_idea"
+        android:textSize="@dimen/title__text_size"
+        android:textColor="@color/text_black_colcor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/normal_marging"
+        android:gravity="center_vertical"
+        android:text="@string/idea_content"
+        android:textColor="@color/text_color_grag_yellow"
+        android:textSize="@dimen/item_content_size" />
+
+</LinearLayout>

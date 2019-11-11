@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_leftSos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding"
+        android:paddingBottom="@dimen/small_padding"
+        android:paddingTop="@dimen/small_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_sosName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/normal_marging"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="老王"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/titile_side_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_sosTel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:drawableRight="@drawable/right"
+                    android:gravity="center_vertical"
+                    android:text="13647602913"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/titile_side_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_rightSos"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/red">
+
+        <TextView
+            android:id="@+id/item_right_txtSos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/report_delete"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titile_side_text_size" />
+    </RelativeLayout>
+
+</LinearLayout>

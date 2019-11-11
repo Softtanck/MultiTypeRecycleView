@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_backgroud"
+        android:padding="@dimen/small_padding">
+
+        <TextView
+            android:id="@+id/tv_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/normal_padding"
+            android:text="A" />
+
+        <TextView
+            android:id="@+id/tv_carname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/large_marging"
+            android:gravity="center"
+            android:text="一汽奥迪"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_carlogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tv_cardetailname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_park_width"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/normal_marging"
+            android:paddingRight="48dp"
+            android:text="奥迪a4L"
+            android:textColor="@color/black"
+            android:textSize="@dimen/titile_side_text_size" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/elv_cartype_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/gray_backgroud"
+        android:groupIndicator="@null"
+        android:scrollbarThumbVertical="@android:color/transparent" />
+
+</LinearLayout>

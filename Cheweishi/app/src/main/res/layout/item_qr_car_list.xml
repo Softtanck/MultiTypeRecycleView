@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/iv_qr_code_car_icon"
+        android:layout_width="@dimen/img_car_height"
+        android:layout_height="@dimen/img_car_height"
+        android:layout_marginLeft="@dimen/normal_marging" />
+
+
+    <TextView
+        android:id="@+id/tv_qr_code_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="--------" />
+</LinearLayout>

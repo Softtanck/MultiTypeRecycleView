@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/tit"
+        layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lay_bottom"
+        android:layout_below="@+id/tit">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.cheweishi.android.widget.MyGallery
+                android:id="@+id/mygallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:soundEffectsEnabled="false" />
+
+            <TextView
+                android:id="@+id/tv_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mygallery"
+                android:layout_marginLeft="@dimen/normal_marging"
+                android:layout_marginTop="@dimen/normal_marging"
+                android:text="2015款 1.6L 自动领先保养套餐"
+                android:textSize="@dimen/ttf_sixteen" />
+
+            <TextView
+                android:id="@+id/tv_package_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_package"
+                android:layout_marginBottom="@dimen/normal_marging"
+                android:layout_marginLeft="@dimen/normal_marging"
+                android:text="厂家专业指导平台保障，为您行车之路保驾护航"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/ttf_fourteen" />
+
+            <TextView
+                android:id="@+id/tv_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_package_note"
+                android:background="@color/line_gray" />
+
+            <RelativeLayout
+                android:id="@+id/park_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_line"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/small_padding"
+                android:paddingLeft="@dimen/normal_padding"
+                android:paddingRight="@dimen/normal_padding"
+                android:paddingTop="@dimen/normal_marging">
+
+                <LinearLayout
+                    android:id="@+id/lay_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/car_iv_location"
+                        android:layout_width="@dimen/title_height"
+                        android:layout_height="@dimen/title_height"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="@dimen/list_item_img"
+                        android:maxWidth="@dimen/list_item_img"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/zhaochewei_img" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:layout_toRightOf="@+id/lay_img"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/lay_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|top">
+
+                            <TextView
+                                android:id="@+id/car_tv_car_iv_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="天天爱保养4s店"
+                                android:textColor="@color/text_black_colcor"
+                                android:textSize="@dimen/ttf_fourteen" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lay_name"
+                            android:gravity="left|center_vertical"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/haoping" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/set_top_marging"
+                                android:src="@drawable/haoping" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/set_top_marging"
+                                android:src="@drawable/haoping" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/set_top_marging"
+                                android:text="100%好评"
+                                android:textColor="@color/deep_orange"
+                                android:textSize="@dimen/ttf_twelve" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/img_maintain_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/img_maintain_ditu"
+                            android:paddingLeft="@dimen/normal_padding"
+                            android:paddingRight="@dimen/normal_padding"
+                            android:src="@drawable/baoyang_phone" />
+
+                        <ImageView
+                            android:id="@+id/img_maintain_ditu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:paddingLeft="@dimen/normal_padding"
+                            android:paddingRight="@dimen/normal_padding"
+                            android:src="@drawable/baoyang_daohang" />
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@+id/img_maintain_ditu"
+                            android:background="@color/line_gray" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|top">
+
+                        <TextView
+                            android:id="@+id/car_xlocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="江北区观音桥街道办事处5楼（12345678）"
+                            android:textColor="@color/gray_normal"
+                            android:textSize="@dimen/ttf_twelve" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_tve_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xlarge_marging"
+                android:layout_below="@+id/park_content"
+                android:layout_marginTop="@dimen/normal_marging"
+                android:background="@color/line_gray" />
+
+            <TextView
+                android:id="@+id/tv_baoyang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_tve_line"
+                android:padding="@dimen/normal_padding"
+                android:text="保养项目"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/ttf_fourteen" />
+
+            <TextView
+                android:id="@+id/tv_baoyang_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_baoyang"
+                android:background="@color/line_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_baoyang_line">
+
+                <com.cheweishi.android.widget.UnSlidingExpandableListView
+                    android:id="@+id/lv_maintain_detils"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:divider="#ebebeb"
+                    android:dividerHeight="1dp"
+                    android:footerDividersEnabled="false"
+                    android:groupIndicator="@null"></com.cheweishi.android.widget.UnSlidingExpandableListView>
+
+                <TextView
+                    android:id="@+id/tv_tve_ex_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/xlarge_marging"
+                    android:layout_below="@+id/lv_maintain_detils"
+                    android:layout_marginTop="@dimen/normal_marging"
+                    android:background="@color/line_gray" />
+
+                <TextView
+                    android:id="@+id/tv_shuom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tve_ex_line"
+                    android:padding="@dimen/normal_padding"
+                    android:text="服务说明"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/ttf_fourteen" />
+
+                <TextView
+                    android:id="@+id/tv_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_shuom"
+                    android:paddingLeft="@dimen/normal_padding"
+                    android:text="@string/service_note"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ttf_twelve" />
+
+                <TextView
+                    android:id="@+id/tv_quote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_service"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="@dimen/normal_padding"
+                    android:text="@string/quote_note"
+                    android:visibility="gone"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ttf_twelve" />
+
+                <TextView
+                    android:id="@+id/tv_arrive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_quote"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="@dimen/normal_padding"
+                    android:visibility="gone"
+                    android:text="@string/arrive_time"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ttf_twelve" />
+
+                <TextView
+                    android:id="@+id/tv_tve_arr_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/xlarge_marging"
+                    android:layout_below="@+id/tv_arrive"
+                    android:layout_marginTop="@dimen/normal_marging"
+                    android:background="@color/line_gray" />
+
+                <TextView
+                    android:id="@+id/tv_user_say"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tve_arr_line"
+                    android:padding="@dimen/normal_padding"
+                    android:text="用户评价"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/ttf_fourteen" />
+
+                <com.cheweishi.android.widget.UnSlidingListView
+                    android:id="@+id/lv_maintain_pinglun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_user_say"
+                    android:background="@color/white"></com.cheweishi.android.widget.UnSlidingListView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/lay_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cankao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_padding"
+            android:text="参考价格"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/ttf_fourteen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_cankao"
+            android:padding="@dimen/normal_padding"
+            android:text="￥500"
+            android:textColor="@color/red"
+            android:textSize="@dimen/ttf_fourteen" />
+
+        <TextView
+            android:id="@+id/tv_maintain_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#ffb359"
+            android:padding="@dimen/normal_padding"
+            android:text="预约服务"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ttf_fourteen" />
+    </RelativeLayout>
+
+</RelativeLayout>

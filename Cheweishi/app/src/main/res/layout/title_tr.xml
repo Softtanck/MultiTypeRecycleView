@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/normal_padding">
+
+    <Button
+        android:id="@+id/tr_left_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:drawableLeft="@drawable/left"
+        android:paddingRight="@dimen/top_left_large_padding"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titile_side_text_size" />
+
+    <TextView
+        android:id="@+id/tr_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title__text_size" />
+
+    <TextView
+        android:id="@+id/tr_right_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/zuji_setting"
+        android:drawablePadding="5dp"
+        android:paddingLeft="@dimen/top_left_large_padding"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titile_side_text_size"
+        android:visibility="gone" />
+
+</RelativeLayout>

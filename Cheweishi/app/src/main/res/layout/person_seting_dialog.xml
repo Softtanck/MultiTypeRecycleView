@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="5dip">
+
+        <Button
+            android:id="@+id/origionImgBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/person_gallery_selector"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="@string/original_img"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#DAD9DB"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/xiangji"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/person_gallery_selector"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="@string/take_pic"
+            android:textColor="@color/black"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#DAD9DB" />
+
+        <Button
+            android:id="@+id/xiangce"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/person_camera_selector"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="@string/select_pic"
+            android:textColor="@color/black"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <Button
+            android:id="@+id/quxiao"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/person_cancel_selector"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="@string/cancel"
+            android:textColor="@color/main_blue"
+            android:textSize="@dimen/titile_side_text_size" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/origionalImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

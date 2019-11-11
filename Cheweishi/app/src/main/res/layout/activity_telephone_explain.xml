@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".TelephoneExplainActivity">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:layout_width="@dimen/orange_point"
+            android:layout_height="@dimen/orange_point"
+            android:background="@drawable/circle_orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:drawablePadding="@dimen/small_padding"
+            android:text="@string/phonecharge_use"
+            android:textColor="@color/home_text_light_black"
+            android:textSize="@dimen/title__text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="@dimen/top_left_small_padding"
+        android:text="@string/internet_phone"
+        android:textColor="@color/gray_normal"
+        android:textSize="@dimen/titile_side_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:layout_width="@dimen/orange_point"
+            android:layout_height="@dimen/orange_point"
+            android:background="@drawable/circle_orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:drawablePadding="@dimen/small_padding"
+            android:text="@string/phonecharge_calculate"
+            android:textColor="@color/home_text_light_black"
+            android:textSize="@dimen/title__text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/thirty_five"
+        android:layout_marginRight="@dimen/top_left_small_padding"
+        android:text="@string/phonecharge_calculate_help"
+        android:textColor="@color/gray_normal"
+        android:textSize="@dimen/titile_side_text_size" />
+
+</LinearLayout>

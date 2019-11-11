@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="true"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_goods_user_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_content_size" />
+
+        <EditText
+            android:id="@+id/et_adm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:background="@color/white"
+            android:maxLength="15"
+            android:textSize="@dimen/item_content_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_content_size" />
+
+        <EditText
+            android:id="@+id/et_adm_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:background="@color/white"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textSize="@dimen/item_content_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_area"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_content_size" />
+
+        <TextView
+            android:id="@+id/tv_adm_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_content_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_content_size" />
+
+        <EditText
+            android:id="@+id/et_adm_detail_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:maxLength="50"
+            android:maxLines="2"
+            android:textSize="@dimen/item_content_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zipcode"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_content_size" />
+
+        <EditText
+            android:id="@+id/et_adm_detail_zipcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="@string/emty_zipcode"
+            android:maxLength="50"
+            android:maxLines="2"
+            android:textSize="@dimen/item_content_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_marging"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/car_default"
+            android:textColor="@color/main_orange"
+            android:textSize="@dimen/item_content_size" />
+
+        <CheckBox
+            android:id="@+id/cb_adm_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/check" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/bt_adm_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/top_left_normal_padding"
+        android:layout_marginRight="@dimen/top_left_normal_padding"
+        android:layout_marginTop="@dimen/large_marging"
+        android:background="@drawable/login_back"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title__text_size" />
+
+</LinearLayout>

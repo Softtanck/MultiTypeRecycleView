@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_function"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gongneng_img"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginTop="@dimen/top_left_small_padding"
+        android:drawableLeft="@drawable/circle_orange"
+        android:drawablePadding="@dimen/small_padding"
+        android:gravity="center_vertical"
+        android:text="@string/cheweishi"
+        android:textSize="@dimen/title__text_size"
+        android:textColor="@color/text_black_colcor" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginRight="@dimen/large_marging"
+        android:layout_marginTop="@dimen/top_left_small_padding"
+        android:text="@string/app_function"
+        android:textColor="@color/text_color_grag_yellow"
+        android:textSize="@dimen/item_content_size" />
+
+    <TextView
+        android:id="@+id/tv_Advertising"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_marging"
+        android:layout_marginTop="@dimen/double_large_marging"
+        android:drawablePadding="@dimen/small_padding"
+        android:text="@string/yijuhua"
+        android:textSize="@dimen/title__text_size"
+        android:textColor="@color/text_black_colcor" />
+
+</LinearLayout>

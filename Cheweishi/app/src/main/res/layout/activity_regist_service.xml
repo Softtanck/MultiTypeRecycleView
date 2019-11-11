@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+    <!--
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_backgroud"
+            android:orientation="vertical"
+            >
+    -->
+    <TextView
+        android:id="@+id/service_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_backgroud"
+        android:paddingBottom="@dimen/normal_padding"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:scrollbarThumbVertical="@android:color/transparent"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:text="@string/service"
+        android:textSize="@dimen/titile_side_text_size"
+        android:visibility="visible" />
+    <!--
+</ScrollView>
+-->
+
+</LinearLayout>

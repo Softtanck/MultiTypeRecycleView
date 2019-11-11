@@ -1,0 +1,377 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_myAccount_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/large_padding">
+
+                <com.cheweishi.android.widget.XCRoundImageView
+                    android:id="@+id/iv_myAccountUserIcon"
+                    android:layout_width="@dimen/user_icon_width1"
+                    android:layout_height="@dimen/user_icon_width1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_nickName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:text="暴走萝莉"
+                        android:textColor="@color/gray_normal"
+                        android:textSize="@dimen/titile_side_text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_myRanking"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/small_marging"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_myDefaultCar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="认证座驾:"
+                            android:textColor="@color/gray_pressed"
+                            android:textSize="@dimen/key_text_small" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_special_sign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/info_douhao"
+                        android:drawablePadding="@dimen/small_padding"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:text="说点什么吧"
+                        android:textColor="@color/gray_pressed"
+                        android:textSize="@dimen/key_text_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_car_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_left_carManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/mycar"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/car_manager"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_my_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/wallet"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/my_money"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/purposes_desc"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_my_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/myorder"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/my_order"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="@color/line_gray" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_msg_center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/more_back"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:visibility="visible"-->
+            <!--android:padding="@dimen/large_padding">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_msg_center"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:drawableLeft="@drawable/message"-->
+            <!--android:drawablePadding="@dimen/normal_padding"-->
+            <!--android:ellipsize="end"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:includeFontPadding="false"-->
+            <!--android:singleLine="true"-->
+            <!--android:text="@string/msg_center"-->
+            <!--android:textColor="@color/gray_normal"-->
+            <!--android:textSize="@dimen/key_text_small" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_messageCount"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:background="@drawable/info_dian"-->
+            <!--android:ellipsize="end"-->
+            <!--android:gravity="center"-->
+            <!--android:singleLine="true"-->
+            <!--android:text=""-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="14sp"-->
+            <!--android:visibility="gone" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:ellipsize="end"-->
+            <!--android:gravity="right|center_vertical"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="18sp" />-->
+            <!--</LinearLayout>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_net_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_net_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/phone"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/net_call"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_communicate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_customer_service"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/alertservice"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/contact_customer_service"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/customerServicePhone"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_feed_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_feed_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/feedback"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/feed_back"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/set"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/setting"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/titile_side_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

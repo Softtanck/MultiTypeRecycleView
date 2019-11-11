@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:padding="20.0dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/friend_circel_hot_page"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/washcar_dialog_title"
+            android:gravity="center"
+            android:padding="@dimen/normal_padding"
+            android:text="提示"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title__text_size"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/normal_padding"
+                android:text="请选择充值金额"
+                android:textColor="@color/gray_normal" />
+            <!--  -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_gray" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_check"
+                        android:padding="@dimen/normal_padding"
+                        android:text="100元"
+                        android:textSize="@dimen/titile_side_text_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_gray" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_check"
+                        android:padding="@dimen/normal_padding"
+                        android:text="300元"
+                        android:textSize="@dimen/titile_side_text_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_gray" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@drawable/radio_button_check"
+                        android:padding="@dimen/normal_padding"
+                        android:text="600元"
+                        android:textSize="@dimen/titile_side_text_size" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line_gray" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_check"
+                        android:padding="@dimen/normal_padding"
+                        android:text="1000元"
+                        android:textSize="@dimen/titile_side_text_size" />
+                </RadioGroup>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#ffd0d0d0" />
+
+        <LinearLayout
+            android:id="@+id/dialog_bottomLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0dip"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:layout_margin="@dimen/normal_marging"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_pos_back"
+                android:gravity="center"
+                android:text="充值"
+                android:textColor="@color/white"
+                android:textSize="@dimen/titile_side_text_size" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:layout_margin="@dimen/normal_marging"
+                android:layout_marginLeft="20.0dip"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_pos_back"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/titile_side_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_backgroud"
+    tools:context=".SOSContactActivity">
+
+    <include layout="@layout/title" />
+
+    <RadioGroup
+        android:id="@+id/rg_sos_crashLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_marging"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_sos_crashLevel_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/more_back"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/sos_check_back"
+            android:padding="@dimen/normal_padding"
+            android:text="@string/crash_level_one"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <RadioButton
+            android:id="@+id/rb_sos_crashLevel_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/more_back"
+            android:button="@null"
+            android:drawableRight="@drawable/sos_check_back"
+            android:padding="@dimen/normal_padding"
+            android:text="@string/crash_level_two"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <RadioButton
+            android:id="@+id/rb_sos_crashLevel_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/more_back"
+            android:button="@null"
+            android:drawableRight="@drawable/sos_check_back"
+            android:padding="@dimen/normal_padding"
+            android:text="@string/crash_level_three"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/titile_side_text_size" />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/top_left_small_padding">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/test_option"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/normal_range"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_xlarge" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/top_left_small_padding"
+        android:background="@color/gray_backgroud" />
+
+    <ListView
+        android:id="@+id/lv_detection_explain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/gray_backgroud"
+        android:layout_marginLeft="@dimen/top_left_small_padding"
+        android:overScrollMode="never"
+        android:dividerHeight="0.5dp"></ListView>
+
+</LinearLayout>

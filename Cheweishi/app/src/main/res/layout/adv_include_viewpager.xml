@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.cheweishi.android.thirdpart.view.CBLoopViewPager
+            android:id="@+id/cbLoopViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+        <LinearLayout
+            android:id="@+id/loPageTurningPoint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/line_gray"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/small_padding" />
+    </LinearLayout>
+
+
+</LinearLayout>

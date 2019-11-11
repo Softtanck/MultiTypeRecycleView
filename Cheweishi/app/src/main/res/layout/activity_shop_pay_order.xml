@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud">
+
+    <include
+        android:id="@+id/i_sp_top"
+        layout="@layout/title" />
+
+    <LinearLayout
+        android:id="@+id/ll_sp_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/normal_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/actual_money"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/item_content_size" />
+
+            <TextView
+                android:id="@+id/tv_sp_order_total_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/zero_money"
+                android:textColor="@color/red"
+                android:textSize="@dimen/item_content_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_sp_pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@color/orange"
+            android:text="@string/confrim_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/item_content_size" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_sp_bottom"
+        android:layout_below="@id/i_sp_top"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_sp_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:focusable="true"
+                android:padding="@dimen/large_padding">
+
+                <ImageView
+                    android:id="@+id/iv_sp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chedongtai_licheng" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/small_marging"
+                    android:layout_marginRight="@dimen/large_marging"
+                    android:layout_toRightOf="@id/iv_sp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_sp_top_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_sp_order_consignee_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/item_content_size" />
+
+                        <TextView
+                            android:id="@+id/tv_sp_order_consignee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLength="15"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/item_content_size" />
+
+                        <TextView
+                            android:id="@+id/tv_sp_order_consignee_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/large_marging"
+                            android:ellipsize="end"
+                            android:maxLength="15"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/item_content_size" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_sp_order_consignee_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/item_content_size" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_marging"
+                android:background="@color/white"
+                android:padding="@dimen/normal_padding"
+                android:text="@string/shop_list"
+                android:textColor="@color/black"
+                android:textSize="@dimen/item_content_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <com.cheweishi.android.widget.ScrollListView
+                android:id="@+id/usl_sp_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/line_gray"
+                android:dividerHeight="1dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_marging"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/normal_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/invoice"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_content_size" />
+
+                    <TextView
+                        android:id="@+id/tv_sp_order_invoice_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/invoice_notice"
+                        android:textColor="@color/maintain_orange"
+                        android:textSize="@dimen/item_small_text_size"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/cb_sp_order_invoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/check"
+                        android:checked="false" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_sp_order_invoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/large_marging"
+                    android:padding="@dimen/normal_padding"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/invoice_title"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/item_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_sp_order_invoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/normal_marging"
+                        android:maxLength="30"
+                        android:background="@color/white_alpha"
+                        android:hint="@string/person_company"
+                        android:textSize="@dimen/item_content_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_marging"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/normal_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yf"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/item_content_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/zero_money"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/item_content_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/small_marging"
+                    android:background="@color/line_gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_marging">
+
+
+                    <TextView
+                        android:id="@+id/tv_sp_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="0"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/item_content_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sp_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/tv_sp_money"
+                        android:text="￥"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/item_small_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sp_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/tv_sp_left"
+                        android:text="@string/total_money"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/item_small_text_size"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tv_sp_total_shop_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/large_marging"
+                        android:layout_toLeftOf="@id/tv_sp_total"
+                        android:text="@string/total_number_item"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/item_small_text_size"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/small_marging"
+                android:background="@color/line_gray" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

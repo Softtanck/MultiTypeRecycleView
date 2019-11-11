@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/more_back"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/normal_padding"
+    android:paddingRight="@dimen/normal_padding"
+    android:paddingBottom="@dimen/small_padding"
+    android:paddingTop="@dimen/small_padding">
+
+    <TextView
+        android:id="@+id/tv_service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="普洗(五座轿车)"
+        android:textColor="@color/text_black_colcor"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small_marging"
+        android:layout_toRightOf="@id/tv_service_name"
+        android:layout_alignBaseline="@id/tv_service_name"
+        android:background="@color/red"
+        android:paddingLeft="@dimen/small_padding"
+        android:paddingRight="@dimen/small_padding"
+        android:text="会员红包"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ttf_ten" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:paddingTop="@dimen/small_padding"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_service_fPrice_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="优惠价nasidasahjshdgajsdhasjdhajhsdgajshdajshdgajhsasdasfdasdfa"
+            android:textColor="@color/light_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_service_fPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/large_marging"
+            android:layout_marginRight="@dimen/large_marging"
+            android:text="￥18"
+            android:textColor="@color/text_fPrice_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btn_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/maintain_click_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="预约"
+            android:textColor="@color/maintain_orange"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

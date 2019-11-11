@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".RegistFinishActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/regist_suc2x" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/gray_backgroud"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_marging"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/regist_finish_title"
+            android:textSize="@dimen/about_us_hint" />
+
+        <Button
+            android:id="@+id/btn_add_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_marging"
+            android:background="@drawable/about_us_btn_back"
+            android:gravity="center"
+            android:padding="@dimen/normal_padding"
+            android:text="@string/addCarRightNow"
+            android:textColor="@color/main_blue"
+            android:textSize="@dimen/title__text_size" />
+
+        <Button
+            android:id="@+id/btn_add_car_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_marging"
+            android:background="@drawable/about_us_btn_back"
+            android:gravity="center"
+            android:padding="@dimen/normal_padding"
+            android:text="@string/watchFirst"
+            android:textColor="@color/main_blue"
+            android:textSize="@dimen/title__text_size" />
+    </LinearLayout>
+
+</LinearLayout>

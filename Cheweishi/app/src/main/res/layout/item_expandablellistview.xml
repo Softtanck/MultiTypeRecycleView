@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="@dimen/small_padding">
+
+    <TextView
+        android:id="@+id/tv_project_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_project_name"
+        android:layout_toLeftOf="@+id/tv_project_money"
+        android:layout_toRightOf="@+id/tv_project_name"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:padding="@dimen/small_padding"
+        android:singleLine="true"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/ttf_twelve" />
+
+    <TextView
+        android:id="@+id/tv_project_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_project_name"
+        android:layout_alignBottom="@+id/tv_project_name"
+        android:layout_toLeftOf="@+id/img_project_right"
+        android:textColor="@color/red"
+        android:textSize="@dimen/ttf_fourteen" />
+
+    <TextView
+        android:id="@+id/tv_project_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/small_padding"
+        android:textColor="@color/main_blue"
+        android:textSize="@dimen/ttf_fourteen" />
+
+    <ImageView
+        android:id="@+id/img_project_right"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignBottom="@+id/tv_project_name"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/normal_marging"
+        android:layout_marginRight="14dp"
+        android:visibility="gone"
+        android:src="@drawable/footwork_listview_item5" />
+
+</RelativeLayout>

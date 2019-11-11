@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:layout_width="@dimen/orange_point"
+            android:layout_height="@dimen/orange_point"
+            android:background="@drawable/circle_orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:text="@string/gain_integral"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/title__text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/description_left"
+        android:layout_marginTop="@dimen/small_marging"
+        android:text="@string/gain_integral_manner"
+        android:textColor="@color/his_gray"
+        android:textSize="@dimen/titile_side_text_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/description_left"
+        android:layout_marginRight="@dimen/top_margin"
+        android:layout_marginTop="@dimen/small_marging"
+        android:text="@string/gain_integral_manner_one"
+        android:textColor="@color/his_gray"
+        android:textSize="@dimen/titile_side_text_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/description_left"
+        android:layout_marginRight="@dimen/top_margin"
+        android:layout_marginTop="@dimen/small_marging"
+        android:text="@string/gain_integral_manner_two"
+        android:textColor="@color/his_gray"
+        android:textSize="@dimen/titile_side_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:layout_width="@dimen/orange_point"
+            android:layout_height="@dimen/orange_point"
+            android:background="@drawable/circle_orange" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:text="@string/integral_use"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/title__text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/description_left"
+        android:layout_marginRight="@dimen/car_main_user"
+        android:layout_marginTop="@dimen/small_marging"
+        android:text="@string/integral_use_help"
+        android:textColor="@color/his_gray"
+        android:textSize="@dimen/titile_side_text_size" />
+
+</LinearLayout>

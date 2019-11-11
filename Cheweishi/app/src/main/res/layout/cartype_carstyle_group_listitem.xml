@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_backgroud"
+        android:padding="@dimen/small_padding">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_groupname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="1.8L /118kW 涡轮增压"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="变速箱"
+            android:textColor="@color/gray_normal" />
+    </LinearLayout>
+
+</LinearLayout>

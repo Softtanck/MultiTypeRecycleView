@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wash_edit">
+
+        <EditText
+            android:id="@+id/idea_ed"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wash_edit"
+            android:layout_marginTop="@dimen/xxlarge_marging"
+            android:background="@color/white"
+            android:gravity="top"
+            android:maxLength="100"
+            android:padding="@dimen/nosmall_padding"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <TextView
+            android:id="@+id/tv_idea_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/small_marging"
+            android:layout_marginRight="@dimen/large_marging"
+            android:text="@string/idea" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/idea_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/illegal_agency_height"
+        android:layout_marginBottom="@dimen/double_double_large_marging"
+        android:layout_marginTop="@dimen/double_large_marging"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/idea_refer"
+        android:textColor="@color/order_blue" />
+
+</LinearLayout>

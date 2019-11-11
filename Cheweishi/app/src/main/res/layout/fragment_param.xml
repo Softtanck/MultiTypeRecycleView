@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <com.cheweishi.android.widget.UnSlidingListView
+        android:id="@+id/usl_param"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_shop_param_detail_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_param_bottom_add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/deep_orange"
+                android:text="@string/add_buy_car"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_content_size" />
+
+            <Button
+                android:id="@+id/bt_param_bottom_buy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/main_red"
+                android:text="@string/now_buy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_content_size" />
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_param_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:tabBackground="@color/white"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/orange"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/orange"
+            app:tabTextColor="@color/shop_top_category_tab_text" />
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_param_shop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_shop_param_detail_bottom"
+            android:layout_below="@id/tl_param_shop" />
+
+    </RelativeLayout>
+</LinearLayout>

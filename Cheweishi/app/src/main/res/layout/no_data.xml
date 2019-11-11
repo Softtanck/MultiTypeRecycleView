@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_car_manager_no_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.cheweishi.android.widget.FontAwesomeView
+        android:id="@+id/fav_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/icon_no_data"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/ttf_one_thousand"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_marging" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_marging"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/titile_side_text_size" />
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/title" />
+
+    <LinearLayout
+        android:id="@+id/ll_mycoupon_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include1"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="8.0dp">
+
+                <Button
+                    android:id="@+id/btn_coupon"
+                    android:layout_width="70dip"
+                    android:layout_height="30dip"
+                    android:background="@drawable/baike_btn_pink_left_f_96"
+                    android:gravity="center"
+                    android:text="优惠券"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_washcar_coupon"
+                    android:layout_width="70dip"
+                    android:layout_height="30dip"
+                    android:background="@drawable/baike_btn_trans_right_f_96"
+                    android:gravity="center"
+                    android:text="洗车券"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_coupon_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_mycoupon_tab" />
+
+</RelativeLayout>

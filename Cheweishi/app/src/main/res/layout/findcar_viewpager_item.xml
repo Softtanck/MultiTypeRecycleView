@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/normal_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/normal_padding">
+
+        <LinearLayout
+            android:id="@+id/tishijulidaohang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_left_small_padding"
+            android:layout_marginRight="@dimen/top_left_small_padding"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/findcarportviewpager_map_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:layout_marginTop="@dimen/normal_marging"
+                    android:singleLine="true"
+                    android:text="英利国际停车场"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/titile_side_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_padding"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/findcarportviewpager_map_item_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/chewei_fangxiang"
+                    android:drawablePadding="@dimen/small_padding"
+                    android:layout_marginLeft="@dimen/small_marging"
+                    android:textColor="@color/gray_normal_6"
+                    android:text="122米" />
+
+                <TextView
+                    android:id="@+id/findcarportviewpager_map_item_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_marging"
+                    android:singleLine="true"
+                    android:text="江北区建新北路16号-负1号"
+                    android:textColor="@color/gray_normal_6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/findcarportviewpager_map_item_surplusCarport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/chewei_chewei"
+                        android:drawablePadding="@dimen/small_padding"
+                        android:layout_marginLeft="@dimen/small_padding"
+                        android:text="235"
+                        android:textColor="@color/main_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/normal_marging"
+                        android:layout_marginLeft="3dp"
+                        android:singleLine="true"
+                        android:text="剩余车位"
+                        android:textColor="@color/gray_pressed" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right">
+
+                    <TextView
+                        android:id="@+id/findcarportviewpager_map_item_costTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/chewei_money"
+                        android:drawablePadding="@dimen/small_padding"
+                        android:layout_marginLeft="@dimen/small_padding"
+                        android:text="10"
+                        android:textColor="@color/main_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_pressed"
+                        android:layout_marginLeft="3dp"
+                        android:text="元起" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/image_thumbnail_spacing"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/gray_backgroud" />
+
+        <LinearLayout
+            android:id="@+id/findcarport_linearlayout_notive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1.7"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/findcarport_viewpager_tv_notive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableTop="@drawable/chewei_go"
+                android:drawablePadding="@dimen/small_padding"
+                android:layout_marginTop="@dimen/small_marging"
+                android:text="@string/mycar_to_there"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

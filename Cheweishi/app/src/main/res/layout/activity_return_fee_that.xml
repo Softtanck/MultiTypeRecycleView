@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ReturnFeeThatActivity">
+
+    <include layout="@layout/title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dian_width"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/orange_point"
+                    android:layout_height="@dimen/orange_point"
+                    android:background="@drawable/circle_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:text="@string/return_money_what"
+                    android:textColor="@color/text_black_colcor"
+                    android:textSize="@dimen/title__text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/description_left"
+                android:layout_marginTop="@dimen/dian_width"
+                android:text="@string/return_mone_detail"
+                android:textColor="@color/gray_normal"
+                android:textSize="@dimen/titile_side_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dian_width"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/orange_point"
+                    android:layout_height="@dimen/orange_point"
+                    android:background="@drawable/circle_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:text="@string/how_enable_acquisition_retrunmoney"
+                    android:textColor="@color/text_black_colcor"
+                    android:textSize="@dimen/title__text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/description_left"
+                android:layout_marginTop="@dimen/dian_width"
+                android:text="@string/select_return_money_or_phonecharge"
+                android:textColor="@color/gray_normal"
+                android:textSize="@dimen/titile_side_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dian_width"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/orange_point"
+                    android:layout_height="@dimen/orange_point"
+                    android:background="@drawable/circle_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:text="@string/return_money_formula_mode"
+                    android:textColor="@color/text_black_colcor"
+                    android:textSize="@dimen/title__text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/description_left"
+                android:layout_marginTop="@dimen/dian_width"
+                android:text="@string/return_money_formula_mode_help"
+                android:textColor="@color/gray_normal"
+                android:textSize="@dimen/titile_side_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dian_width"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/orange_point"
+                    android:layout_height="@dimen/orange_point"
+                    android:background="@drawable/circle_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/normal_marging"
+                    android:text="@string/return_money_how_withdraw_deposit"
+                    android:textColor="@color/text_black_colcor"
+                    android:textSize="@dimen/title__text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/top_left_large_padding"
+                android:layout_marginTop="@dimen/dian_width"
+                android:text="@string/withdraw_deposit_only_alipay"
+                android:textColor="@color/gray_normal"
+                android:textSize="@dimen/titile_side_text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

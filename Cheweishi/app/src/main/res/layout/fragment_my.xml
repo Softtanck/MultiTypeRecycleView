@@ -1,0 +1,596 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud">
+
+    <View
+        android:id="@+id/iv_my_top"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="-300dp"
+        android:background="@color/home_ring" />
+
+    <com.cheweishi.android.widget.PullScrollView
+        android:id="@+id/psl_my"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:headerHeight="300dp"
+        app:headerVisibleHeight="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--android:background="@color/home_ring"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/home_ring">
+
+                <com.cheweishi.android.widget.XCRoundImageView
+                    android:id="@+id/iv_myAccountUserIcon"
+                    android:layout_width="@dimen/user_icon_width1"
+                    android:layout_height="@dimen/user_icon_width1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/info_touxiang_moren"
+                    app:border_outside_color="@color/hyal_head"
+                    app:border_thickness="3dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_my_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_myAccountUserIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/key_text_small" />
+
+                <TextView
+                    android:id="@+id/tv_my_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_my_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/item_back"
+                    android:textSize="@dimen/key_text_small" />
+
+                <TextView
+                    android:id="@+id/tv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="20dp"
+                    android:drawableLeft="@drawable/set"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/titile_side_text_size" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/tv_my_phone"
+                    android:background="@color/grid_state_pressed"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_default_coupon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/my_coupon" />
+
+                        <TextView
+                            android:id="@+id/tv_coupon_number_my"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="优惠券(0)"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.01"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_default_car"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/my_car" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_my_user_car_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="我的车库(0)"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_my_user_car_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:textColor="@color/line_gray"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_car_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_left_carManager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/mycar"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/car_manager"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_marging"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_my_shop_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/more_back"
+                    android:padding="@dimen/large_padding">
+
+                    <TextView
+                        android:id="@+id/tv_my_shop_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:drawableLeft="@drawable/myorder"
+                        android:drawablePadding="@dimen/normal_padding"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:text="商品订单"
+                        android:textColor="@color/gray_normal"
+                        android:textSize="@dimen/key_text_small" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/right"
+                        android:gravity="right"
+                        android:text="查看所有商品订单  "
+                        android:textColor="@color/light_gray" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/v_my_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@id/ll_my_shop_order"
+                    android:background="@color/line_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_my_line"
+                    android:layout_marginTop="@dimen/small_marging"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/normal_padding">
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_shop_unpaid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/more_back"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/unpaid"
+                            android:textColor="@color/light_gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_shop_unsend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/more_back"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/unsend"
+                            android:textColor="@color/light_gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_shop_unrec"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/more_back"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/unrec"
+                            android:textColor="@color/light_gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_my_shop_received"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/more_back"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/received"
+                            android:textColor="@color/light_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_my_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/wallet"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/my_money"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/purposes_desc"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_reback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/myorder"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/reback_money"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_my_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/myorder"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/my_order"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_my_scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_my_scan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/scan_icon"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/main_saoyisao"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/mpic_desc"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_net_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_net_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/phone"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/net_call"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_communicate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_customer_service"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/alertservice"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/contact_customer_service"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/customerServicePhone"
+                    android:textColor="@color/gray_pressed"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_feed_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_back"
+                android:gravity="center_vertical"
+                android:padding="@dimen/large_padding">
+
+                <TextView
+                    android:id="@+id/tv_feed_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/feedback"
+                    android:drawablePadding="@dimen/normal_padding"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="@string/feed_back"
+                    android:textColor="@color/gray_normal"
+                    android:textSize="@dimen/key_text_small" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray" />
+        </LinearLayout>
+    </com.cheweishi.android.widget.PullScrollView>
+
+</RelativeLayout>

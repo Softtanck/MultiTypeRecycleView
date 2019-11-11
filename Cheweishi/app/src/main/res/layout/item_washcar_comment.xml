@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.cheweishi.android.widget.XCRoundImageView
+        android:id="@+id/img_wash_comm_tx"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/normal_marging"
+        android:layout_marginLeft="@dimen/normal_marging"
+        android:src="@drawable/empty_photo" />
+
+    <TextView
+        android:id="@+id/tv_washcar_comm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal_marging"
+        android:layout_alignBaseline="@+id/tv_wash_comm_username"
+        android:layout_alignBottom="@+id/tv_wash_comm_username"
+        android:layout_alignParentRight="true"
+        android:text="2015-12-12"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/ttf_fourteen" />
+
+    <TextView
+        android:id="@+id/tv_wash_comm_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_wash_comm_tx"
+        android:layout_toRightOf="@+id/img_wash_comm_tx"
+        android:padding="@dimen/normal_marging"
+        android:text="x******1"
+        android:textSize="@dimen/ttf_fourteen" />
+
+    <TextView
+        android:id="@+id/tv_washcar_comm_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="东西收到了，很满意，物流也快！！！"
+        android:layout_below="@+id/img_wash_comm_tx"
+        android:padding="@dimen/normal_marging" />
+
+    <LinearLayout
+        android:id="@+id/lay_washcar_comm_say"
+        android:layout_below="@+id/tv_washcar_comm_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/normal_marging">
+
+        <ImageView
+            android:id="@+id/tmg_washcar_comm_one"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/default_head_img" />
+
+        <ImageView
+            android:id="@+id/tmg_washcar_comm_two"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:src="@drawable/default_head_img" />
+
+        <ImageView
+            android:id="@+id/tmg_washcar_comm_three"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:src="@drawable/default_head_img" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xlarge_marging"
+        android:background="@color/line_gray"
+        android:layout_below="@+id/lay_washcar_comm_say" />
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud">
+
+    <include
+        android:id="@+id/i_buy_cart_title"
+        layout="@layout/title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_buy_cart_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="@dimen/normal_padding">
+
+        <ImageView
+            android:id="@+id/iv_bc_bottom_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mess_yuan_click" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/small_marging"
+            android:layout_toRightOf="@id/iv_bc_bottom_check"
+            android:text="全选"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/item_small_text_size" />
+
+        <TextView
+            android:id="@+id/tv_bc_bottom_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:background="@drawable/btn_blue_bg_selector"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingBottom="@dimen/small_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:text="@string/buy_cart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/item_small_text_size" />
+
+
+        <TextView
+            android:id="@+id/tv_bc_bottom_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_bc_bottom_buy"
+            android:text="0"
+            android:textColor="@color/red"
+            android:textSize="@dimen/item_content_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_bc_bottom_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_bc_bottom_money"
+            android:text="￥"
+            android:textColor="@color/red"
+            android:textSize="@dimen/item_small_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_bc_bottom_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_bc_bottom_left"
+            android:text="@string/total_money"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/item_small_text_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/plr_buy_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_buy_cart_bottom"
+        android:layout_below="@id/i_buy_cart_title"
+        android:divider="@color/line_gray"
+        android:dividerHeight="1dp"
+        android:scrollbars="none" />
+
+</RelativeLayout>

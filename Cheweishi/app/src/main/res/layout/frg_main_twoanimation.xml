@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.15">
+
+        <ImageView
+            android:id="@+id/main_iv_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/home_color_car" />
+
+        <com.cheweishi.android.widget.TwoAnimationLayout
+            android:id="@+id/mian_rel_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"></com.cheweishi.android.widget.TwoAnimationLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/home_wangge" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_blue"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/two_dp_padding"
+                    android:drawablePadding="@dimen/two_dp_padding"
+                    android:drawableTop="@drawable/home_sanjiao"
+                    android:gravity="center"
+                    android:text="@string/zero_percent"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/left_xian"
+            android:layout_width="@dimen/double_double_large_marging"
+            android:layout_height="match_parent"
+            android:background="@color/sliding_menu_item_release"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/main_lin_xian5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:background="@color/sliding_menu_item_release"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/xian"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@color/main_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_lin_xian2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:background="@color/sliding_menu_item_release"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_tv_baifenbi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/two_dp_padding"
+                    android:drawablePadding="@dimen/two_dp_padding"
+                    android:drawableTop="@drawable/home_sanjiao"
+                    android:gravity="center"
+                    android:text="@string/zero_percent"
+                    android:textColor="@color/main_text3"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.85">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:layout_marginStart="@dimen/normal_marging"
+            android:text="@string/detecting"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <TextView
+            android:id="@+id/main_tv_checkstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv1"
+            android:layout_alignBottom="@+id/tv1"
+            android:layout_marginLeft="@dimen/normal_marging"
+            android:layout_marginStart="@dimen/normal_marging"
+            android:layout_toRightOf="@+id/tv1"
+            android:textColor="@color/text_black_colcor"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <TextView
+            android:id="@+id/mian_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/top_left_small_padding"
+            android:layout_marginRight="@dimen/top_left_small_padding"
+            android:textColor="@color/main_text3"
+            android:textSize="@dimen/titile_side_text_size" />
+    </RelativeLayout>
+
+</LinearLayout>

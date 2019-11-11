@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <ListView
+        android:id="@+id/lv_pessanySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_marging"
+        android:divider="@color/gray_backgroud"
+        android:dividerHeight="@dimen/large_marging"
+        android:scrollbars="none" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="交管数据可能延时，查询结果仅供参考"
+        android:textColor="@color/gray_normal"
+        android:textSize="@dimen/titile_side_text_size" />
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding">
+
+        <TextView
+            android:id="@+id/left_action"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:drawableLeft="@drawable/left"
+            android:drawablePadding="@dimen/small_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:gravity="center"
+            android:textColor="@color/title_text_gray"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <ImageView
+            android:id="@+id/right_action"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/normal_padding"
+            android:singleLine="true"
+            android:background="@color/white"
+            android:src="@drawable/zhaochewei_sousuo" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/right_action"
+            android:layout_toRightOf="@id/left_action"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/normal_padding"
+            android:paddingRight="@dimen/normal_padding"
+            android:paddingTop="@dimen/small_padding"
+            android:paddingBottom="@dimen/small_padding"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/title__text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/listToMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include"
+        android:background="@color/white"
+        android:fadingEdge="none"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_map"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/chewei_bj2"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/small_padding"
+            android:paddingTop="@dimen/small_padding">
+
+            <TextView
+                android:id="@+id/rb_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/chewei_map_click"
+                android:drawablePadding="@dimen/small_padding"
+                android:gravity="center"
+                android:text="@string/map"
+                android:textColor="@color/orange" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/small_padding"
+            android:paddingTop="@dimen/small_padding">
+
+            <TextView
+                android:id="@+id/rb_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/chewei_list"
+                android:drawablePadding="@dimen/small_padding"
+                android:gravity="center"
+                android:text="@string/list"
+                android:textColor="@color/text_black_colcor" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

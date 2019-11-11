@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_thumbnail_spacing"
+        android:layout_marginTop="@dimen/call_button_padding_left"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/large_padding"
+        android:paddingTop="@dimen/large_padding">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_left_small_padding"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/age"
+            android:textSize="@dimen/titile_side_text_size"
+            android:textColor="@color/text_black_colcor" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/titile_side_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:text="@string/age_unit"
+            android:textColor="@color/gray_normal"
+            android:textSize="@dimen/titile_side_text_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_thumbnail_spacing"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="@dimen/large_padding"
+            android:text="@string/brith_change_age"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/item_content_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_thumbnail_spacing"
+            android:background="@color/line_gray" />
+
+        <com.cheweishi.android.widget.DateSelectorNotFrameWheelView
+            android:id="@+id/wv_selectorDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/double_large_marging"
+            android:layout_marginTop="@dimen/double_large_marging"></com.cheweishi.android.widget.DateSelectorNotFrameWheelView>
+    </LinearLayout>
+
+</LinearLayout>
